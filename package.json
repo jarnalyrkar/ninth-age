@@ -4,34 +4,17 @@
     "description": "",
     "main": "webpack.config.js",
     "dependencies": {
+        "client-zip": "^2.4.4",
         "swiper": "^8.4.2"
     },
     "devDependencies": {
-        "@babel/core": "^7.13.14",
-        "@babel/preset-env": "^7.13.12",
-        "@babel/preset-react": "^7.13.13",
-        "autoprefixer": "^10.1.0",
-        "babel-loader": "^8.2.2",
-        "browser-sync": "^2.27.9",
-        "browser-sync-webpack-plugin": "^2.3.0",
-        "clean-webpack-plugin": "^3.0.0",
-        "css-loader": "^4.3.0",
-        "css-minimizer-webpack-plugin": "^3.1.1",
-        "mini-css-extract-plugin": "^2.4.3",
-        "node-sass": "^8.0.0",
-        "postcss": "^8.1",
-        "postcss-loader": "^4.0.3",
-        "sass": "^1.32.8",
-        "sass-loader": "^13.2.0",
-        "source-map-loader": "^3.0.1",
-        "style-loader": "^1.3.0",
-        "terser-webpack-plugin": "^4.2.3",
-        "webpack": "^5.60.0",
-        "webpack-cli": "^4.9.1",
-        "webpack-dev-server": "^3.11.2"
+        "laravel-vite-plugin": "^0.8.0",
+        "sass": "^1.67.0",
+        "vite": "^4.4.9"
     },
     "scripts": {
-        "watch": "webpack --config ./webpack.config.js"
+        "dev": "vite",
+        "build": "vite build"
     },
     "author": "",
     "license": "ISC"
