@@ -2,17 +2,10 @@
 
 :root {
   /* Main Colors */
-  --color-bg: #fff;
+  --color-main: #fff;
   --color-text: #000;
 
-  --col: calc(100% / 12);
-  /* Centered container width */
-  --container: 100%;
-  @media(min-width: $small) {--container: 540px;}
-  @media(min-width: $medium) {--container: 720px;}
-  @media(min-width: $large) {--container: 960px;}
-  @media(min-width: $xlarge) {--container: 1140px;}
-  @media(min-width: $xxlarge) {--container: 1320px;}
+  --gap: 1rem;
 
   /* Module spacing */
   --module-spacing: 3rem;
