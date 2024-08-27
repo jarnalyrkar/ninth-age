@@ -1,0 +1,21 @@
+@use '../base' as *;
+
+.site-navigation {
+  position:relative;
+  &--open .site-navigation__outer {
+    transform: translateY(0);
+  }
+  &__outer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: var(--color-accent-400);
+    z-index: 5;
+    transition: transform 300ms;
+    transform: translateY(-100%);
+    padding-block: 4rem;
+  }
+  &__inner {
+    @include container;
+  }
+}

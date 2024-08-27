@@ -3,7 +3,7 @@ id: home
 blueprint: pages
 title: Home
 updated_by: 9da3c936-f032-4fc4-95ba-d7d71ca81a34
-updated_at: 1724791676
+updated_at: 1724796726
 modules:
   -
     id: m0bgapwc
@@ -74,7 +74,7 @@ modules:
             content:
               -
                 type: text
-                text: 'Many people love to play games against friends, family, and other members of the Ninth Age community. If you want to play'
+                text: 'Learn to play using our free rulebooks, or use video resources made by the community. Many people love to play games against friends, family, and other members of the Ninth Age community.'
         type: card
         enabled: true
         image: minis-tabletop.jpg

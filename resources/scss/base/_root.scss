@@ -3,7 +3,6 @@
 :root {
   /* Main Colors */
   --color-main: rgb(47, 57, 76);
-
   --color-main-light-900: color-mix(in srgb, rgb(47, 57, 76) 10%, white 90%);
   --color-main-light-800: color-mix(in srgb, rgb(47, 57, 76) 20%, white 80%);
   --color-main-light-700: color-mix(in srgb, rgb(47, 57, 76) 30%, white 70%);
@@ -36,11 +35,17 @@
   --fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
   --fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
   --fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
-
   /* Module spacing */
+
+  --container: 100%;
   --module-spacing: 3rem;
-  @media(min-width: $medium) {
-    --module-spacing: 6rem;
-  }
+  @media(min-width: $medium) {--module-spacing: 6rem;}
+  @media(min-width: $small) {--container: 33.75em;}
+  @media(min-width: $medium) {--container: 45em;}
+  @media(min-width: $large) {--container: 60em;}
+  @media(min-width: $xlarge) {--container: 71.25em}
+  @media(min-width: $xxlarge) {--container: 82.5em;}
+  @media(min-width: $xxxlarge) {--container: 108rem;}
+
 
 }

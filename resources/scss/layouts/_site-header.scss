@@ -4,6 +4,8 @@
   background-color: var(--color-main);
   color: white;
   padding-block: 1rem;
+  position: relative;
+  z-index: 10;
   &__inner {
     display: flex;
     justify-content: space-between;

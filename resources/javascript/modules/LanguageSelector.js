@@ -1,8 +1,13 @@
 const dropdown = document.querySelector('.language-selector__dropdown-container')
 const button = document.querySelector('.language-selector__button')
 export function languageSelector() {
-  button.addEventListener('click', () => {
-    dropdown.classList.toggle('language-selector__dropdown-container--open')
+  addEventListener('click', (ev) => {
+    if (ev.target.classList.contains('language-selector__link')) return
+    if (ev.target === button) {
+      dropdown.classList.toggle('language-selector__dropdown-container--open')
+    } else {
+      closeLanguageSelector()
+    }
   })
 }
 

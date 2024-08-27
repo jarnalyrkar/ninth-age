@@ -22,7 +22,7 @@ class ForumNews extends Tags
         $feed->enable_cache(false);
         $feed->init();
         $data = [];
-        foreach($feed->get_items(0, 5) as $item) {
+        foreach($feed->get_items(0, 10) as $item) {
           $data[] = [
             'title' => $item->get_title(),
             'url' => $item->get_permalink(),

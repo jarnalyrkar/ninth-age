@@ -4,14 +4,12 @@
   background: var(--color-main);
   color: var(--color-accent-900);
   padding-block: 4rem;
-  &__inner {
-    @include container;
-  }
   &__header {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     padding-bottom: 4rem;
+    @include container;
     @media(max-width: $large) {
       flex-wrap: wrap;
       row-gap: 1rem;
@@ -36,8 +34,9 @@
   &__list {
     display: flex;
     gap: 1rem;
-    overflow: auto;
-    padding-top: .5rem;
+    overflow: scroll;
+    padding-block: .5rem;
+    margin-left: calc((100% - var(--container)) / 2);
   }
   &__item {
     position: relative;

@@ -9,21 +9,32 @@
   right: 0;
   bottom: 2rem;
   z-index: 10;
+  pointer-events: none;
   @include container;
   &__button {
+    pointer-events: all;
     background-color: var(--color-main);
-    border: unset;
+    border: 1px solid var(--color-accent-100);
     color: var(--color-main-light-700);
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
     cursor: pointer;
+    transition: background-color 300ms;
+    &:hover {
+      background-color: var(--color-main-light-100);
+    }
+    &:active {
+      background-color: var(--color-main-light-400);
+    }
     & svg {
       width: 100%;
       height: 100%;
+      pointer-events: none;
     }
   }
   &__dropdown-container {
+    pointer-events: all;
     max-height: 0;
     @include list-reset;
     transform: translateX(25%);

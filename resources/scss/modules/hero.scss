@@ -1,7 +1,7 @@
 @use '../base' as *;
 
 .hero {
-  height: calc(100vh - 75px);
+  height: calc(100vh - 70px);
   &__heading-outer {
     position: relative;
     @include container;
@@ -19,6 +19,7 @@
     line-height: 1;
     text-wrap: balance;
     text-transform: uppercase;
+    padding-bottom: 1rem;
   }
   &__description {
     font-family: sans-serif;
@@ -26,6 +27,15 @@
   }
   &__image-container {
     height: 100%;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background: linear-gradient(360deg, rgba(0,0,0, .5) 25%, transparent);
+    }
   }
   &__image {
     width: 100%;
