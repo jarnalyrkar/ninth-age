@@ -1,0 +1,40 @@
+@use '../base' as *;
+
+.feature-navigation {
+  &__list {
+    display: flex;
+    gap: 2rem;
+    @include list-reset;
+  }
+  &__link {
+    text-decoration: unset;
+    color: white;
+    position: relative;
+    transition: color 300ms linear;
+    &::after {
+      content: '';
+      position: absolute;
+      margin-inline: auto;
+      width: 0;
+      height: 2px;
+      bottom: -.5rem;
+      right: 0;
+      left: 0;
+      background-color: var(--color-accent);
+      transition: width 300ms ease-out;
+    }
+    &:hover {
+      color: var(--color-accent);
+      &::after {
+        width: 100%;
+      }
+    }
+    &:active {
+      transition-duration: 50ms;
+      color: var(--color-accent-400);
+      &::after {
+        width: 80%;
+      }
+    }
+  }
+}

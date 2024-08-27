@@ -1,6 +1,15 @@
-import MenuButtonlistener from './modules/navigation/MenuButtonListener'
+import { TabsCardsListener } from "./modules/TabsCards";
+import { languageSelector, closeLanguageSelector } from "./modules/LanguageSelector";
+const tabsCards = document.querySelectorAll('.tabs-cards')
+if (tabsCards) {
+  tabsCards.forEach(el => {
+    TabsCardsListener(el)
+  })
+}
+languageSelector()
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Add all your JS modules here:
-  let menuButtonListener = new MenuButtonlistener()
+addEventListener('keydown', (ev) => {
+  if (ev.key === 'Escape') {
+    closeLanguageSelector()
+  }
 })

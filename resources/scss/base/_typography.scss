@@ -5,3 +5,13 @@ html {
   line-height: 1.2;
   color: var(--color-text);
 }
+
+p {
+  font-family: "Times New Roman", serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  font-family: "Tahoma", sans-serif;
+  font-weight: 700;
+}

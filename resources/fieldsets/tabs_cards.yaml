@@ -1,0 +1,37 @@
+title: 'Tabs Cards'
+fields:
+  -
+    handle: heading
+    field:
+      type: text
+      display: Heading
+  -
+    handle: cards
+    field:
+      type: replicator
+      display: Cards
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            card:
+              display: Card
+              fields:
+                -
+                  handle: tab_name
+                  field:
+                    type: text
+                    display: 'Tab name'
+                -
+                  handle: content
+                  field:
+                    remove_empty_nodes: false
+                    type: bard
+                    display: Content
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Image

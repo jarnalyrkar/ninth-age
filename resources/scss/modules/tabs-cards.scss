@@ -1,0 +1,99 @@
+@use '../base' as *;
+
+.tabs-cards {
+  padding-block: var(--module-spacing);
+  background-color: var(--color-accent-900);
+  &__inner {
+    padding-block: 4rem;
+    padding-inline: 4rem;
+    border-radius: 1rem;
+    background-color: var(--color-main);
+    color: var(--color-accent-900);
+    @include container;
+  }
+  &__heading {
+    font-size: var(--fs-xl);
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  &__nav-list {
+    @include list-reset;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 4rem;
+  }
+  &__nav-item {
+    display: block;
+    width: 100%;
+  }
+  &__nav-button {
+    width: 100%;
+    background-color: unset;
+    border: unset;
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-main-light-300);
+    color: inherit;
+    font-size: var(--fs-md);
+    cursor: pointer;
+    transition: border-color 300ms, color 300ms;
+    position: relative;
+    font-family: serif;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      width: 0;
+      background-color: var(--color-accent);
+      margin-inline: auto;
+      transition: width 300ms;
+    }
+    &:hover {
+      color: var(--color-accent);
+      &::after {
+        width: 25%;
+      }
+    }
+    &:active {
+      color: var(--color-accent-400);
+      &::after {
+        width: 15%;
+      }
+    }
+    &--active {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+      cursor: unset;
+      &:hover::after {
+        width: 100%;
+      }
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+  &__card {
+    display: none;
+    font-size: var(--fs-md);
+    transition: opacity 1000ms;
+    & h2 {
+      font-size: var(--fs-lg);
+      padding-bottom: 1rem;
+    }
+    &--active {
+      display: grid;
+      grid-template-columns: 3fr 1fr 3fr;
+    }
+  }
+  &__image-container {
+    grid-column: 3;
+  }
+  &__image {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

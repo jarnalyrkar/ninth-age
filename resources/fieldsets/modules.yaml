@@ -1,0 +1,27 @@
+title: Modules
+fields:
+  -
+    handle: modules
+    field:
+      type: replicator
+      display: Modules
+      collapse: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            hero:
+              display: Hero
+              fields:
+                -
+                  import: hero
+            tabs_cards:
+              display: 'Tabs Cards'
+              fields:
+                -
+                  import: tabs_cards
+            forum_news:
+              display: 'News from Forum'
+              fields:
+                -
+                  import: forum_news

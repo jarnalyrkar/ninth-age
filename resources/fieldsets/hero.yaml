@@ -1,0 +1,14 @@
+title: Hero
+fields:
+  -
+    handle: heading
+    field:
+      type: text
+      display: Heading
+  -
+    handle: background_image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Background image'

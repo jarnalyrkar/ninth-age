@@ -1,0 +1,19 @@
+title: 'Forum News'
+fields:
+  -
+    handle: heading
+    field:
+      type: text
+      display: Heading
+  -
+    handle: archive_label
+    field:
+      type: text
+      display: 'Archive Label'
+      width: 50
+  -
+    handle: archive_link
+    field:
+      type: link
+      display: 'Archive Link'
+      width: 50

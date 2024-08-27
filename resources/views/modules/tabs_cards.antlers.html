@@ -1,0 +1,26 @@
+<section class="tabs-cards">
+  <div class="tabs-cards__inner">
+    <h2 class="tabs-cards__heading">{{ heading }}</h2>
+    <div class="tabs-cards__nav">
+      <ol class="tabs-cards__nav-list">
+        {{ cards }}
+          <li class="tabs-cards__nav-item">
+            <button class="tabs-cards__nav-button{{ first ? ' tabs-cards__nav-button--active' : '' }}" value="{{ tab_name|slugify }}">
+              {{ tab_name }}
+            </button>
+          </li>
+        {{ /cards }}
+      </ol>
+    </div>
+    <div class="tabs-cards__cards">
+      {{ cards }}
+        <article class="tabs-cards__card {{ first ? 'tabs-cards__card--active' : '' }}" data-tab="{{ tab_name|slugify }}">
+          <div class="tabs-cards__card-content">{{ content }}</div>
+          <div class="tabs-cards__image-container">
+            <img class="tabs-cards__image" src="{{ image }}">
+          </div>
+        </article>
+      {{ /cards }}
+    </div>
+  </div>
+</section>

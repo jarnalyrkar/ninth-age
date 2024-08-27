@@ -1,0 +1,24 @@
+@use '../base' as *;
+
+.site-header {
+  background-color: var(--color-main);
+  color: white;
+  padding-block: 1rem;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include container;
+  }
+  &__logo {
+    width: 8.5rem;
+  }
+  &--scrolling {
+    padding-block: .5rem;
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}

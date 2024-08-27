@@ -1,7 +1,12 @@
 /* Default style for html-tags often used in wysiwyg-fields */
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
 a {
   text-decoration: underline;
-  color: var(--color-accent);
+  color: var(--color-text);
 }
 
 ul {

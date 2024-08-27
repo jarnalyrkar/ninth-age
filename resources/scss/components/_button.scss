@@ -1,1 +1,13 @@
 @use '../base' as *;
+
+.button {
+  text-decoration: none;
+  border-radius: 10rem;
+  padding: .75rem 1rem;
+  background-color: var(--color-accent);
+  color: white;
+  transition: background-color 300ms;
+  &:hover {
+    background-color: var(--color-accent-300);
+  }
+}

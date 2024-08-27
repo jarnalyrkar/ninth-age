@@ -2,10 +2,7 @@
 
 /* Centered container */
 @mixin container {
-  background-color: blue;
-  color: white;
-  text-align: center;
-  max-width: 100%;
+  width: 100%;
   margin-inline: auto;
   @media(max-width: $small) {
     padding-inline: 1rem;
@@ -15,4 +12,11 @@
   @media(min-width: $large) {max-width: 60em;}
   @media(min-width: $xlarge) {max-width: 71.25em}
   @media(min-width: $xxlarge) {max-width: 82.5em;}
+  @media(min-width: $xxxlarge) {max-width: 108rem;}
+}
+
+@mixin list-reset {
+  list-style: none;
+  padding-left: unset;
+  margin-block: 0;
 }

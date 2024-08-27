@@ -2,14 +2,45 @@
 
 :root {
   /* Main Colors */
-  --color-main: #fff;
+  --color-main: rgb(47, 57, 76);
+
+  --color-main-light-900: color-mix(in srgb, rgb(47, 57, 76) 10%, white 90%);
+  --color-main-light-800: color-mix(in srgb, rgb(47, 57, 76) 20%, white 80%);
+  --color-main-light-700: color-mix(in srgb, rgb(47, 57, 76) 30%, white 70%);
+  --color-main-light-600: color-mix(in srgb, rgb(47, 57, 76) 40%, white 60%);
+  --color-main-light-500: color-mix(in srgb, rgb(47, 57, 76) 50%, white 50%);
+  --color-main-light-400: color-mix(in srgb, rgb(47, 57, 76) 60%, white 40%);
+  --color-main-light-300: color-mix(in srgb, rgb(47, 57, 76) 70%, white 30%);
+  --color-main-light-200: color-mix(in srgb, rgb(47, 57, 76) 80%, white 20%);
+  --color-main-light-100: color-mix(in srgb, rgb(47, 57, 76) 90%, white 10%);
+
+  --color-accent: #E8A41F;
+  --color-accent-900: color-mix(in srgb, #E8A41F 10%, white 90%);
+  --color-accent-800: color-mix(in srgb, #E8A41F 20%, white 80%);
+  --color-accent-700: color-mix(in srgb, #E8A41F 30%, white 70%);
+  --color-accent-600: color-mix(in srgb, #E8A41F 40%, white 60%);
+  --color-accent-500: color-mix(in srgb, #E8A41F 50%, white 50%);
+  --color-accent-400: color-mix(in srgb, #E8A41F 60%, white 40%);
+  --color-accent-300: color-mix(in srgb, #E8A41F 70%, white 30%);
+  --color-accent-200: color-mix(in srgb, #E8A41F 80%, white 20%);
+  --color-accent-100: color-mix(in srgb, #E8A41F 90%, white 10%);
+
   --color-text: #000;
 
   --gap: 1rem;
+
+  --fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
+  --fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
+  --fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
+  --fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
+  --fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
+  --fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
+  --fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
 
   /* Module spacing */
   --module-spacing: 3rem;
   @media(min-width: $medium) {
     --module-spacing: 6rem;
   }
+
 }

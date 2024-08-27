@@ -1,0 +1,76 @@
+@use '../base' as *;
+
+.forum-news {
+  background: var(--color-main);
+  color: var(--color-accent-900);
+  padding-block: 4rem;
+  &__inner {
+    @include container;
+  }
+  &__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 4rem;
+    @media(max-width: $large) {
+      flex-wrap: wrap;
+      row-gap: 1rem;
+    }
+    @media(min-width: $large) {
+      padding-bottom: 2rem;
+    }
+  }
+  &__heading {
+    font-size: var(--fs-md);
+  }
+  &__archive {
+    color: inherit;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    & svg {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+  &__list {
+    display: flex;
+    gap: 1rem;
+    overflow: auto;
+    padding-top: .5rem;
+  }
+  &__item {
+    position: relative;
+    background-color: color-mix(in srgb, var(--color-main) 100%, black 40%);
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: background-color 300ms, transform 1s;
+    min-width: 20rem;
+    &:hover {
+      transform: translateY(-.5rem);
+      background-color: var(--color-main-light-100);
+    }
+  }
+  &__item-heading {
+    padding-right: 1.5rem;
+  }
+  &__item-date {
+    padding-block: 1rem;
+  }
+  &__item-link {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__item-teaser {
+    font-family: serif;
+  }
+  &__external-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 1rem;
+    height: 1rem;
+  }
+}

@@ -1,0 +1,10 @@
+#burger {
+  background-color: unset;
+  border: unset;
+  color: inherit;
+  cursor: pointer;
+  & svg  {
+    width: 2rem;
+    height: 2rem;
+  }
+}
