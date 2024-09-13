@@ -1,0 +1,51 @@
+@use '../base' as *;
+
+.cards {
+  padding-block: calc(var(--module-spacing) * 2);
+  background-size: cover;
+  background-position: 100%;
+  border-image: fill 1 linear-gradient(rgba(0, 0, 0, 0.5) 25%, rgba(0, 0, 0, 0) 100%);
+  &__inner {
+    padding-inline: calc((100% / 12) * 1);
+    @include container;
+  }
+  &__heading {
+    font-size: var(--fs-xl);
+    padding-bottom: var(--module-spacing);
+    color: white;
+    text-align: center;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  &__image {
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+  &__card {
+    border-radius: 1rem;
+    background-color: rgba(47, 57, 76, 0.5);
+    backdrop-filter: blur(10px);
+    color: white;
+    position: relative;
+    transition: transform 400ms;
+    &:hover {
+      transform: translateY(-.5rem);
+    }
+  }
+  &__content {
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+  }
+  &__card-heading {
+    padding-block: 1rem;
+    font-size: var(--fs-lg);
+  }
+  &__link-overlay {
+    position: absolute;
+    inset: 0;
+  }
+}

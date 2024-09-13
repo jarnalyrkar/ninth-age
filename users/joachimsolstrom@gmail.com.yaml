@@ -2,3 +2,10 @@ name: 'Joachim Strøm'
 super: true
 id: 9da3c936-f032-4fc4-95ba-d7d71ca81a34
 password_hash: $2y$10$9e9Akri1mLl4GXnXTXreMuhq4AFuque0d0SJYwpas4MQ9dZ1uobe2
+preferences:
+  collections:
+    pages:
+      after_save: continue_editing
+  assets:
+    assets:
+      mode: grid

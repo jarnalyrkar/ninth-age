@@ -6,11 +6,10 @@
   justify-content: end;
   margin-inline: auto;
   left: 0;
-  right: 0;
-  bottom: 2rem;
+  right: 1rem;
+  bottom: 1rem;
   z-index: 10;
   pointer-events: none;
-  @include container;
   &__button {
     pointer-events: all;
     background-color: var(--color-main);

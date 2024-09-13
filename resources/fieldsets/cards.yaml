@@ -1,0 +1,54 @@
+title: Cards
+fields:
+  -
+    handle: heading
+    field:
+      type: text
+      display: Heading
+  -
+    handle: background_image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Background Image'
+  -
+    handle: cards
+    field:
+      type: replicator
+      display: Cards
+      collapse: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            new_card:
+              display: 'New Card'
+              fields:
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Image
+                -
+                  handle: super
+                  field:
+                    type: text
+                    display: Super
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: description
+                  field:
+                    type: textarea
+                    display: Description
+                -
+                  handle: link
+                  field:
+                    type: link
+                    display: Link

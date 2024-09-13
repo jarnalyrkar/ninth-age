@@ -9,3 +9,7 @@
 .noscroll {
   overflow: hidden;
 }
+
+body {
+  scroll-behavior: smooth;
+}

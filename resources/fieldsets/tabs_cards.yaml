@@ -10,6 +10,7 @@ fields:
     field:
       type: replicator
       display: Cards
+      collapse: true
       sets:
         new_set_group:
           display: 'New Set Group'

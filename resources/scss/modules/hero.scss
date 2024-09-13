@@ -27,6 +27,11 @@
   }
   &__image-container {
     height: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    &.transitions {
+      transition: background-position 2s linear;
+    }
     &::after {
       content: '';
       position: absolute;
@@ -34,7 +39,7 @@
       left: 0;
       right: 0;
       height: 100%;
-      background: linear-gradient(360deg, rgba(0,0,0, .5) 25%, transparent);
+      background: linear-gradient(0, rgba(0,0,0, .5) 33.33%, transparent);
     }
   }
   &__image {

@@ -3,7 +3,7 @@ id: home
 blueprint: pages
 title: Home
 updated_by: 9da3c936-f032-4fc4-95ba-d7d71ca81a34
-updated_at: 1724796726
+updated_at: 1725562379
 modules:
   -
     id: m0bgapwc
@@ -32,10 +32,10 @@ modules:
             content:
               -
                 type: text
-                text: 'You choose miniatures from whichever manufacturer you like the most. If you prefer to try the game out first, you can print out and use paper proxies. You can also play against others online, using third-party services.'
+                text: 'We do not sell or produce miniatures, so you get to pick and choose miniatures from whichever manufacturer you like the most! You could even 3D-print your own army, or use Lego or paper proxies. Using third-party services, you can also play the game online.'
         type: card
         enabled: true
-        image: minis.jpg
+        image: wdt-barbarian-horde.jpg
       -
         id: m0bhyv81
         tab_name: 'Build & Paint'
@@ -53,7 +53,7 @@ modules:
             content:
               -
                 type: text
-                text: "Building and painting is one of the most rewarding parts of the Warhammer hobby. Whether you're crafting a regular human soldier, a towering daemon, or a colossal mechanical construct, your skills will grow with practice as you bring your miniatures to life."
+                text: "Building and painting is one of the most rewarding parts of the hobby. Whether you're crafting a regular human soldier, a towering daemon, or a colossal mechanical construct, your skills will grow with practice as you bring your miniatures to life."
         type: card
         enabled: true
         image: 2024-08-27_20-42.jpeg
@@ -98,7 +98,7 @@ modules:
               -
                 type: text
                 text: 'If you like competing in tournaments, there are several competitions each year.'
-        image: tournament.jpeg
+        image: etc24_venue_4-16-9.jpg
     type: tabs_cards
     enabled: true
   -
@@ -108,4 +108,38 @@ modules:
     enabled: true
     archive_label: 'Deep Dive in the Archive'
     archive_link: 'https://community.the-ninth-age.com/news/'
+  -
+    id: m0fgtrhv
+    heading: 'Start your Ninth Age Journey'
+    cards:
+      -
+        id: m0fgtydb
+        super: 'Next Steps'
+        heading: 'Get started'
+        description: 'Find the resources you need to start playing the game'
+        type: new_card
+        enabled: true
+        image: 20221203_144520.jpg
+        link: '#'
+      -
+        id: m0fguy4k
+        super: 'Next Steps'
+        heading: 'Explore the Setting'
+        description: 'Humanity is beset on all sides by terrible threats. Technology and science offer no hope, and there is no peace between the stars.'
+        type: new_card
+        enabled: true
+        image: skaven_bataille_final_1024_web16-9.jpg
+        link: '#'
+      -
+        id: m0fgvfti
+        super: 'Next Steps'
+        heading: 'Discover the Armies'
+        description: 'From defenders of the Imperium to malign, mystical forces and alien tides, the galaxy is filled with warring factions.'
+        type: new_card
+        enabled: true
+        image: art_cover_frb-16-9.jpg
+        link: '#'
+    type: cards
+    enabled: true
+    background_image: art_army_ud_26_army-of-the-dead.jpg
 ---

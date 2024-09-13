@@ -1,0 +1,22 @@
+<section class="cards" style="background-image: url({{ background_image }})">
+  <div class="cards__inner">
+    <h2 class="cards__heading">{{ heading }}</h2>
+    <div class="cards__list">
+      {{ cards }}
+        <article class="cards__card">
+          <div class="cards__image-container">
+            <img class="cards__image" src="{{ image }}">
+          </div>
+          <div class="cards__content">
+            <p class="cards__card-super">{{ super }}</p>
+            <h3 class="cards__card-heading">{{ heading }}</h3>
+            <div class="cards__card-description">{{ description }}</div>
+          </div>
+          {{ if link }}
+          <a class="cards__link-overlay" href="{{ link }}"></a>
+          {{ /if }}
+        </article>
+      {{ /cards }}
+    </div>
+  </div>
+</section>

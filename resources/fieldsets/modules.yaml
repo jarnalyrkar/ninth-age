@@ -25,3 +25,13 @@ fields:
               fields:
                 -
                   import: forum_news
+            cards:
+              display: Cards
+              fields:
+                -
+                  import: cards
+            content:
+              display: Content
+              fields:
+                -
+                  import: content

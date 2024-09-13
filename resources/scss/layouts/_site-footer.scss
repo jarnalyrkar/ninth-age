@@ -1,1 +1,10 @@
 @use '../base' as *;
+
+.site-footer {
+  background-color: var(--color-main);
+  color: white;
+  padding-block: var(--module-spacing);
+  &__inner {
+    @include container;
+  }
+}
