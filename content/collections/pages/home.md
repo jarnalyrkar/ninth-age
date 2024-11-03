@@ -3,7 +3,7 @@ id: home
 blueprint: pages
 title: Home
 updated_by: 9da3c936-f032-4fc4-95ba-d7d71ca81a34
-updated_at: 1725562379
+updated_at: 1730671302
 modules:
   -
     id: m0bgapwc
@@ -11,6 +11,9 @@ modules:
     background_image: battlescene.webp
     type: hero
     enabled: true
+    news_heading: 'News from the trenches'
+    archive_label: 'Deep Dive the Archive'
+    archive_link: 'https://community.the-ninth-age.com/news/'
   -
     id: m0bhvzb1
     heading: 'How we play'
@@ -105,9 +108,13 @@ modules:
     id: m0cvfxy4
     heading: 'News from the trenches'
     type: forum_news
-    enabled: true
-    archive_label: 'Deep Dive in the Archive'
+    enabled: false
+    archive_label: 'Deep Dive the Archive'
     archive_link: 'https://community.the-ninth-age.com/news/'
+  -
+    id: m321d3t6
+    type: armies_list
+    enabled: true
   -
     id: m0fgtrhv
     heading: 'Start your Ninth Age Journey'

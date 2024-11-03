@@ -1,11 +1,11 @@
 @use '../base' as *;
 
 .cards {
-  padding-block: calc(var(--module-spacing) * 2);
   background-size: cover;
   background-position: 100%;
   border-image: fill 1 linear-gradient(rgba(0, 0, 0, 0.5) 25%, rgba(0, 0, 0, 0) 100%);
   &__inner {
+    padding-block: calc(var(--module-spacing) * 2);
     padding-inline: calc((100% / 12) * 1);
     @include container;
   }
@@ -17,8 +17,14 @@
   }
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    grid-template-columns: repeat(3, 100%);
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    @media(min-width: $large) {
+      overflow-x: unset;
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
   &__image {
     border-radius: 1rem 1rem 0 0;
@@ -32,6 +38,7 @@
     color: white;
     position: relative;
     transition: transform 400ms;
+    scroll-snap-align: center;
     &:hover {
       transform: translateY(-.5rem);
     }

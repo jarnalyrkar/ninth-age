@@ -2,28 +2,50 @@
 
 .hero {
   height: calc(100vh - 70px);
-  &__heading-outer {
+  color: white;
+  &__outer {
     position: relative;
     @include container;
   }
+  &__header {
+    max-width: var(--container);
+    margin-inline: auto;
+    position:absolute;
+    inset: 0;
+    display: flex;
+    padding-top: 11dvh;
+    @media(max-width: $small) {
+      padding-inline: 1rem;
+    }
+    @media(min-width: $large) {
+      padding-top: 10rem;
+    }
+  }
+  &__header-inner {
+    max-width: 80ch;
+  }
   &__heading-inner {
     position: absolute;
-    bottom: 5rem;
+    bottom: 1dvh;
     left: 0;
-    color: white;
-    max-width: 60rem;
   }
   &__heading {
-    font-size: var(--fs-xxxl);
     font-weight: 900;
     line-height: 1;
     text-wrap: balance;
     text-transform: uppercase;
     padding-bottom: 1rem;
+    font-size: var(--fs-xxl);
+    @media(min-width: $large) {
+      font-size: var(--fs-xxxl);
+    }
   }
   &__description {
     font-family: sans-serif;
-    font-size: 2rem;
+    font-size: var(--fs-lg);
+    @media(min-width: $large) {
+      font-size: 2rem;
+    }
   }
   &__image-container {
     height: 100%;

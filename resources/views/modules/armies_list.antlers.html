@@ -1,0 +1,30 @@
+<section class="armies-list filled">
+  <div class="armies-list__inner">
+    <header class="armies-list__header">
+      <h2 class="armies-list__heading">The Armies of 9th Age</h2>
+    </header>
+    <div class="armies-list__layout">
+      <div class="armies-list__buttons">
+        {{ collection:armies }}
+          <button title="{{ title }}" class="army-button{{ if first }} army-button--active{{ /if }}" data-target="{{ slug }}">
+            <img class="army-button__image" src="{{ icon }}">
+          </button>
+        {{ /collection:armies }}
+      </div>
+      <div class="armies-list__armies">
+        {{ collection:armies }}
+          <article id="{{ slug }}" class="army-featured{{ if first }} army-featured--show{{ /if }}">
+            <header class="army-featured__header">
+              <h2 class="army-featured__heading">{{ title }}</h2>
+              <div class="army-featured__description">{{ description }}</div>
+              <a class="button" href="{{ url }}">Learn more about {{ title }}</a>
+            </header>
+            <div class="army-featured__image-container">
+              <img class="army-featured__image" src="{{ sketch }}" alt="" loading="lazy">
+            </div>
+          </article>
+        {{ /collection:armies }}
+      </div>
+    </div>
+  </div>
+</section>

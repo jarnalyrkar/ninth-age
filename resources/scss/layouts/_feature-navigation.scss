@@ -1,6 +1,10 @@
 @use '../base' as *;
 
 .feature-navigation {
+  display: none;
+  @media(min-width: $large) {
+    display: block;
+  }
   &__list {
     display: flex;
     gap: 2rem;

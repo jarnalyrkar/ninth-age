@@ -13,6 +13,18 @@
   --color-main-light-200: color-mix(in srgb, rgb(47, 57, 76) 80%, white 20%);
   --color-main-light-100: color-mix(in srgb, rgb(47, 57, 76) 90%, white 10%);
 
+  --color-main-dark-900: color-mix(in srgb, rgb(47, 57, 76) 10%, white 90%);
+  --color-main-dark-800: color-mix(in srgb, rgb(47, 57, 76) 20%, white 80%);
+  --color-main-dark-700: color-mix(in srgb, rgb(47, 57, 76) 30%, white 70%);
+  --color-main-dark-600: color-mix(in srgb, rgb(47, 57, 76) 40%, white 60%);
+  --color-main-dark-500: color-mix(in srgb, rgb(47, 57, 76) 50%, white 50%);
+  --color-main-dark-400: color-mix(in srgb, rgb(47, 57, 76) 60%, white 40%);
+  --color-main-dark-300: color-mix(in srgb, rgb(47, 57, 76) 70%, white 30%);
+  --color-main-dark-200: color-mix(in srgb, rgb(47, 57, 76) 80%, white 20%);
+  --color-main-dark-100: color-mix(in srgb, rgb(47, 57, 76) 90%, white 10%);
+
+  --color-secondary: #C1DDFF;
+
   --color-accent: #E8A41F;
   --color-accent-900: color-mix(in srgb, #E8A41F 10%, white 90%);
   --color-accent-800: color-mix(in srgb, #E8A41F 20%, white 80%);

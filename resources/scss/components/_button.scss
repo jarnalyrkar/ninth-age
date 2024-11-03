@@ -4,10 +4,17 @@
   text-decoration: none;
   border-radius: 10rem;
   padding: .75rem 1rem;
-  background-color: var(--color-accent);
-  color: white;
+  background-color: var(--color-secondary);
+  color: var(--color-main);
   transition: background-color 300ms;
-  &:hover {
-    background-color: var(--color-accent-300);
+  display: inline-block;
+  @media(hover:hover) {
+    &:hover {
+      background-color: var(--color-accent);
+      color:white;
+    }
+  }
+  &:active {
+    background-color: var(--color-accent-400);
   }
 }

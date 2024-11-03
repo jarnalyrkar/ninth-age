@@ -1,30 +1,44 @@
 @use '../base' as *;
 
 .tabs-cards {
-  padding-block: var(--module-spacing);
   background-color: var(--color-accent-900);
+  @media(min-width: $large) {
+    padding-block: var(--module-spacing);
+  }
   &__inner {
-    padding-block: 4rem;
+    padding-block: var(--module-spacing);
     padding-inline: 4rem;
-    border-radius: 1.5rem;
     background-color: var(--color-main);
     color: var(--color-accent-900);
     @include container;
+    @media(min-width: $large) {
+      border-radius: 1.5rem;
+    }
   }
   &__heading {
     font-size: var(--fs-xl);
     text-align: center;
     padding-bottom: 2rem;
   }
+  &__nav {
+    @media(max-width: $large) {
+      overflow-x: scroll;
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  }
   &__nav-list {
     @include list-reset;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 4rem;
+    @media(min-width: $large) {
+      padding-bottom: 4rem;
+    }
   }
   &__nav-item {
     display: block;
     width: 100%;
+    text-wrap: nowrap;
   }
   &__nav-button {
     width: 100%;
@@ -33,11 +47,15 @@
     cursor: pointer;
     border-bottom: 1px solid var(--color-main-light-300);
     color: inherit;
-    font-size: var(--fs-md);
     cursor: pointer;
     transition: border-color 300ms, color 300ms;
     position: relative;
     font-family: serif;
+    padding-inline: 1rem;
+    font-size: var(--fs-base);
+    @media(min-width: $large) {
+      font-size: var(--fs-md);
+    }
     &::after {
       content: '';
       position: absolute;
@@ -84,11 +102,18 @@
     }
     &--active {
       display: grid;
-      grid-template-columns: 3fr 1fr 3fr;
+      @media(min-width: $large) {
+        grid-template-columns: 3fr 1fr 3fr;
+      }
     }
   }
   &__image-container {
-    grid-column: 3;
+    @media(min-width: $large) {
+      grid-column: 3;
+    }
+    @media(max-width: $large) {
+      padding-top: 2rem;
+    }
   }
   &__image {
     aspect-ratio: 16/9;

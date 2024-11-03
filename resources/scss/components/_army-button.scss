@@ -1,0 +1,32 @@
+@use '../base' as *;
+
+.army-button {
+  background-color: var(--color-accent-700);
+  border-radius: 50%;
+  border: 1px solid var(--color-main);
+  cursor: pointer;
+  transition: background-color 300ms;
+  padding: .25rem;
+  @media(min-width: $large) {
+    padding: .75rem;
+  }
+  &__image {
+    width: 3rem;
+    pointer-events: none;
+    transition: transform 300ms;
+  }
+  @media(hover: hover) {
+    &:hover {
+      background-color: var(--color-accent-800);
+    }
+  }
+  &:active {
+    background-color: var(--color-accent-900);
+    & .army-button__image {
+      transform: scale(120%);
+    }
+  }
+  &--active {
+    background-color: var(--color-accent-400);
+  }
+}

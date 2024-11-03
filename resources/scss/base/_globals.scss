@@ -1,8 +1,8 @@
 @use "breakpoints" as *;
 
 /* Module spacing */
-.negative + .negative, .bg-main + .bg-main { // allways add padding to element too.
-  margin-top: calc(-1 * var(--module-spacing));
+.filled + .filled { // allways add padding to element too.
+  padding-top: unset;
 }
 
 /* Utilities */

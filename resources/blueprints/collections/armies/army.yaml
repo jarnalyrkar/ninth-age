@@ -1,0 +1,57 @@
+title: Army
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            import: modules
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+  featured_view:
+    display: 'Featured View'
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            handle: icon
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: Icon
+          -
+            handle: sketch
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: Sketch
+          -
+            handle: description
+            field:
+              buttons:
+                - bold
+                - italic
+                - removeformat
+              remove_empty_nodes: false
+              type: bard
+              display: Description

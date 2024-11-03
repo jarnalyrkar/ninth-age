@@ -36,3 +36,7 @@ b, strong {
 i, em {
   font-style: italic;
 }
+
+p + p {
+  margin-top: 1rem;
+}

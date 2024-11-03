@@ -1,0 +1,42 @@
+@use '../base' as *;
+
+.army-featured {
+    opacity: 0;
+    position: absolute;
+    transition: opacity 750ms ease-in;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    display: flex;
+    flex-direction: column-reverse;
+    @media(min-width: $large) {
+      grid-template-columns: 1fr 400px;
+      display: grid;
+    }
+    &--show {
+      opacity: 1;
+      z-index: 1;
+      position: relative;
+    }
+    &__heading {
+      font-size: var(--fs-xl);
+    }
+    &__description {
+      padding-top: 1rem;
+      font-size: var(--fs-base);
+      @media(min-width: $large) {
+        font-size: var(--fs-md);
+      }
+    }
+    &__image-container {
+      background-color: var(--color-accent-700);
+      text-align: center;
+    }
+    &__image {
+      mix-blend-mode: darken;
+      max-height: 250px;
+      @media(min-width: $large) {
+        max-height: 600px;
+      }
+    }
+  }

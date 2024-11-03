@@ -35,3 +35,8 @@ fields:
               fields:
                 -
                   import: content
+            armies_list:
+              display: 'Armies List'
+              fields:
+                -
+                  import: armies_list
