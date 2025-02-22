@@ -4,7 +4,7 @@
   background-color: var(--color-main);
   color: var(--color-accent-900);
   padding-block: var(--module-spacing);
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   &__outer {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -17,17 +17,17 @@
     text-transform: unset,
   }
   & h1 {
-    font-size: var(--fs-xl);
-  }
-  & h2 {
     font-size: var(--fs-lg);
   }
-  & h3 {
+  & h2 {
     font-size: var(--fs-md);
+  }
+  & h3 {
+    font-size: var(--fs-sm);
   }
   & h1, h2, h3 {
     color: var(--color-accent);
-    padding-bottom: 1rem;
+    padding-bottom: .5rem;
   }
   & * + h2, * + h3 {
     padding-top: 2rem;

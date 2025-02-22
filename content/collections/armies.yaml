@@ -1,6 +1,7 @@
 title: Armies
 template: default
 layout: layout
+mount: b215bef1-5b14-4d8e-baa4-7a67e71fd444
 revisions: false
 route: '{mount}/{slug}'
 sort_dir: asc
