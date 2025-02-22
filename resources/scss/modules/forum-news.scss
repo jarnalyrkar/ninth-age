@@ -41,7 +41,6 @@
     scroll-snap-type: x mandatory;
     padding-block: .5rem;
     position: relative;
-    color: white;
     max-width: calc(100vw - (100vw - var(--container))/2);
     @media(hover: hover) {
       &:hover #news-scroll-button {
@@ -49,16 +48,20 @@
       }
     }
   }
-  &__item {
+  &__link {
+    display: block;
+    height: 100%;
     position: relative;
-    background-color: color-mix(in srgb, var(--color-main) 100%, black 40%);
+    background-color: color-mix(in srgb, var(--color-main) 100%, transparent 25%);
+    backdrop-filter: blur(3px);
     padding: 1rem;
     border-radius: 1rem;
     transition: background-color 300ms, transform 1s;
     scroll-snap-align: center;
+    text-decoration: none;
+    color: white;
     &:hover {
       transform: translateY(-.5rem);
-      background-color: var(--color-main-light-100);
     }
     &:hover .forum-news__item-heading {
       color: var(--color-accent);
@@ -76,27 +79,23 @@
   }
   &__item-heading {
     transition: color 300ms;
-    padding-bottom: 1rem;
+    font-weight: 400;
+    padding-right: 1.5rem;
+    text-transform: unset;
   }
   &__item-date {
     padding-bottom: 1rem;
-  }
-  &__item-link {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-  }
-  &__item-teaser {
-    font-family: serif;
-    display: none;
+    font-weight: 700;
+    &::after {
+      content: ': ';
+    }
   }
   &__external-icon {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
     width: 1rem;
     height: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
   }
   & #news-scroll-button {
     margin-block: auto;
@@ -105,9 +104,9 @@
     height: 2.5rem;
     font-size: 1.25rem;
     background-color: var(--color-main);
-    border: 1px solid var(--color-accent-100);
+    border: 1px solid var(--color-accent);
     line-height: 1;
-    color: white;
+    color: var(--color-main-light-900);
     border-radius: 50%;
     cursor: pointer;
     font-weight: 900;
@@ -119,10 +118,10 @@
       display: block;
     }
     &:hover {
-      background-color: var(--color-main-light-100);
+      background-color: var(--color-accent-400);
     }
     &:active {
-      background-color: var(--color-main-light-400);
+      background-color: var(--color-accent-800);
     }
   }
 }

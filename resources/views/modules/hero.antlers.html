@@ -1,30 +1,39 @@
 <section class="hero">
   <div class="hero__image-container" style="background-image: url({{ background_image }});"></div>
-  <header class="hero__header">
-    <div class="hero__header-inner">
-      <h1 class="hero__heading">{{ heading }}</h1>
-      <p class="hero__description">&#45; A fantasy wargame by the community</p>
-    </div>
-  </header>
-  <div class="hero__outer">
-    <div class="hero__heading-inner">
-      <div class="forum-news">
-        <header class="forum-news__header">
-          <h2 class="forum-news__heading">{{ news_heading }}</h2>
-          <a class="forum-news__archive" target="_blank" href="{{ archive_link }}">{{ archive_label }}{{ svg:link-external }}</a>
-        </header>
-        <div class="forum-news__list-container">
-          <div class="forum-news__list">
-            {{ forum_news }}
-              <article class="forum-news__item">
-                {{ svg:link-external class="forum-news__external-icon" }}
-                <p class="forum-news__item-date">{{ date |iso_format('DD MMM') }}</p>
-                <h3 class="forum-news__item-heading">{{ title }}</h3>
-                <div class="forum-news__item-teaser">{{ content | strip_tags | safe_truncate(150, '...') }}</div>
-                <a class="forum-news__item-link" target="_blank" href="{{ url }}"></a>
-              </article>
-            {{ /forum_news }}
-            <button id="news-scroll-button">&gt;</button>
+  <div class="hero__container">
+    <div class="hero__inner">
+      <header class="hero__header">
+        <div class="hero__header-inner">
+          <h1 class="hero__heading">{{ heading }}</h1>
+          <p class="hero__description">A fantasy wargame by the community</p>
+        </div>
+      </header>
+      <div class="hero__forum-posts">
+        <div class="hero__heading-inner">
+          <div class="forum-news">
+            <header class="forum-news__header">
+              <div>
+                <h2 class="forum-news__heading">{{ news_heading }}</h2>
+                <a class="forum-news__archive" target="_blank" href="{{ archive_link }}">{{ archive_label }}{{ svg:link-external }}</a>
+              </div>
+              <button id="news-scroll-button">&gt;</button>
+            </header>
+            <div class="forum-news__list-container">
+              <div class="forum-news__list">
+                {{ forum_news }}
+                  <article class="forum-news__item">
+                    <a class="forum-news__link" target="_blank" href="{{ url }}">
+                      {{ svg:link-external class="forum-news__external-icon" }}
+                      <h3 class="forum-news__item-heading">
+                        <span class="forum-news__item-date">{{ date |iso_format('DD MMM') }}</span>
+                        {{ title }}
+                      </h3>
+                    </a>
+                  </article>
+                {{ /forum_news }}
+
+              </div>
+            </div>
           </div>
         </div>
       </div>

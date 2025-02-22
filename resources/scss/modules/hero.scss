@@ -1,33 +1,37 @@
 @use '../base' as *;
 
 .hero {
-  height: calc(100vh - 70px);
+  --header-height: 70px;
+  height: calc(100vh - var(--header-height));
   color: white;
-  &__outer {
-    position: relative;
-    @include container;
+  &__container {
+    position: absolute;
+    inset: 0;
+    top: var(--header-height);
+    display: flex;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-block: 2rem;
+    margin-inline: auto;
+    width: 100%;
   }
   &__header {
-    max-width: var(--container);
-    margin-inline: auto;
-    position:absolute;
-    inset: 0;
+    height: 100%;
     display: flex;
-    padding-top: 11dvh;
-    @media(max-width: $small) {
-      padding-inline: 1rem;
-    }
-    @media(min-width: $large) {
-      padding-top: 10rem;
-    }
-  }
-  &__header-inner {
-    max-width: 80ch;
+    align-items: center;
+    @include container;
   }
   &__heading-inner {
-    position: absolute;
-    bottom: 1dvh;
-    left: 0;
+    margin-left: calc((100vw - var(--container)) / 2);
+  }
+  &__header-inner {
+    text-align: center;
+    text-wrap: balance;
+    max-width: 75ch;
+    margin-inline: auto;
   }
   &__heading {
     font-weight: 900;

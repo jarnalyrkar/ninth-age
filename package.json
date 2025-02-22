@@ -4,13 +4,13 @@
     "description": "",
     "main": "webpack.config.js",
     "dependencies": {
-        "client-zip": "^2.4.4",
-        "swiper": "^8.4.2"
+        "client-zip": "^2.4.6",
+        "swiper": "^11.2.4"
     },
     "devDependencies": {
-        "laravel-vite-plugin": "^0.8.0",
-        "sass": "^1.67.0",
-        "vite": "^4.4.9"
+        "laravel-vite-plugin": "^1.2.0",
+        "sass": "^1.85.0",
+        "vite": "^6.1.1"
     },
     "scripts": {
         "dev": "vite",

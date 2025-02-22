@@ -1,12 +1,13 @@
 {
   "resources/javascript/site.js": {
-    "file": "assets/site-08fc0f80.js",
-    "isEntry": true,
-    "src": "resources/javascript/site.js"
+    "file": "assets/site-CjHxXa65.js",
+    "name": "site",
+    "src": "resources/javascript/site.js",
+    "isEntry": true
   },
   "resources/scss/site.scss": {
-    "file": "assets/site-aebbac95.css",
-    "isEntry": true,
-    "src": "resources/scss/site.scss"
+    "file": "assets/site-BQ032_3q.css",
+    "src": "resources/scss/site.scss",
+    "isEntry": true
   }
 }

@@ -1,7 +1,6 @@
 import { TabsCardsListener } from "./modules/TabsCards";
 import { languageSelector, closeLanguageSelector } from "./modules/LanguageSelector";
 import { openMenu, closeMenu, toggleMenu } from "./modules/Navigation"
-import { imageHoverEffect } from './modules/ImageHoverEffect'
 import { armyButtonListener } from "./modules/ArmyButtons";
 
 const tabsCards = document.querySelectorAll('.tabs-cards')
@@ -25,28 +24,24 @@ addEventListener('keydown', (ev) => {
   }
 })
 
-const heroElement = document.querySelector('.hero')
-if (heroElement) {
-  imageHoverEffect()
-}
-
 const newsScroll = document.querySelector('#news-scroll-button')
 if (newsScroll) {
+  const scrollableEl = newsScroll.closest('.forum-news').querySelector('.forum-news__list')
   newsScroll.addEventListener('click', () => {
-    if (newsScroll.parentElement.scrollLeft < window.innerWidth / 2) {
-      newsScroll.parentElement.scroll({
+    if (scrollableEl.scrollLeft < window.innerWidth / 2) {
+      scrollableEl.scroll({
         left: window.innerWidth,
         behavior: 'smooth'
       })
     } else {
-      newsScroll.parentElement.scroll({
+      scrollableEl.scroll({
         left: 0,
         behavior: 'smooth'
       })
     }
   })
-  newsScroll.parentElement.addEventListener('scroll', () => {
-    if (newsScroll.parentElement.scrollLeft < window.innerWidth / 2) {
+  scrollableEl.addEventListener('scroll', () => {
+    if (scrollableEl.scrollLeft < window.innerWidth / 2) {
       if (newsScroll.innerHTML != ">") {
         newsScroll.innerHTML = ">"
       }

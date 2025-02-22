@@ -1,14 +1,14 @@
 @use '../base' as *;
 
 .tabs-cards {
-  background-color: var(--color-accent-900);
+  background-color: var(--color-main);
   @media(min-width: $large) {
     padding-block: var(--module-spacing);
   }
   &__inner {
+    background-color: var(--color-main-light-100);
     padding-block: var(--module-spacing);
     padding-inline: 4rem;
-    background-color: var(--color-main);
     color: var(--color-accent-900);
     @include container;
     @media(min-width: $large) {
