@@ -2,6 +2,8 @@ import { TabsCardsListener } from "./modules/TabsCards";
 import { languageSelector, closeLanguageSelector } from "./modules/LanguageSelector";
 import { openMenu, closeMenu, toggleMenu } from "./modules/Navigation"
 import { armyButtonListener } from "./modules/ArmyButtons";
+import { cardGenerator } from "./modules/CardGenerator";
+
 
 const tabsCards = document.querySelectorAll('.tabs-cards')
 if (tabsCards) {
@@ -57,3 +59,5 @@ const armiesList = document.querySelector('.armies-list')
 if (armiesList) {
   armyButtonListener(armiesList)
 }
+
+cardGenerator()

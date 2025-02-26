@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title ?? site:name }}</title>
+  {{ vite src="resources/javascript/site.js|resources/scss/site.scss" }}
+</head>
+
+<body>
+  {{ partial:header }}
+  {{ partial:navigation }}
+  <div class="generator-settings">
+    <div class="generator-settings__inner">
+      <select id="version-select">
+        <option disabled selected hidden>Select Rule Version</option>
+        {{ versions }}
+          {{ if game == 'ninthAge' }}
+            <option value="{{ id }}">{{ name }}</option>
+          {{ /if }}
+        {{ /versions }}
+      </select>
+      <select id="army-select">
+        <option disabled selected hidden>Select Army</option>
+      </select>
+      <select id="army-sub-version-select">
+        <option disabled selected hidden>Select Army Version</option>
+      </select>
+      <input type="color">
+    </div>
+  </div>
+
+    <main>
+      <div id="army-list" class="army-list"></div>
+    </main>
+
+    <template id="unit-card">
+      {{ partial:generator/card-unit }}
+    </template>
+
+  {{ partial:footer }}
+</body>
+
+</html>
+

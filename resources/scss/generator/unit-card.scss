@@ -1,0 +1,202 @@
+:root {
+  --text-dark: #000;
+  --text-light: #fff;
+  --card-width: 320px;
+}
+
+.army-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(var(--card-width), 100%), 1fr));
+  padding-block: 2rem;
+  max-width: var(--container);
+  margin-inline: auto;
+  &[data-theme="dark"] {
+    --color-text: var(--text-light);
+    --border-style: 1px solid color-mix(in srgb, var(--army-color), transparent 80%);
+    --icon-filter: brightness(0) invert(1);
+  }
+  &[data-theme="light"] {
+    --color-text: var(--text-dark);
+    --border-style: 1px solid color-mix(in srgb, var(--army-color), transparent 80%);
+    --icon-filter: none;
+  }
+}
+.hidden {
+  display: none;
+}
+.generator-settings {
+  width: var(--container);
+  margin-inline: auto;
+  padding-block: 1rem;
+  &__inner {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+  }
+}
+
+.unit-card {
+  &__inner {
+    overflow: hidden;
+    border-radius: 2rem;
+    background-color: color-mix(in srgb, var(--army-color), #fff 20%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 460px;
+    position: relative;
+  }
+  &__icon {
+    background-color: var(--army-color);
+    position: absolute;
+    height: 5rem;
+    width: 3rem;
+    top: 0;
+    left: 1rem;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding-bottom: .8rem;
+    box-shadow: .5rem 0 1rem rgba(0, 0, 0, .75);
+    border-radius: 0 0 1rem 1rem;
+    & img {
+      filter: var(--icon-filter);
+      width: 44px;
+      height: 44px;
+      vertical-align: middle;
+    }
+  }
+  &__details {
+    background-color: rgba(255, 255, 255, .80);
+    backdrop-filter: blur(5px);
+    border-radius: 1rem 0 0 0;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 5.5rem);
+    right: 0;
+    font-size: 10pt;
+    padding: 1rem;
+  }
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    row-gap: .5rem;
+    padding-bottom: .25rem;
+    text-align: center;
+    & dt {
+      font-weight: 700;
+      font-size: 8pt;
+    }
+    & dd {
+      padding-bottom: .25rem;
+      border-bottom: var(--border-style)
+    }
+  }
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: var(--border-style);
+    padding-bottom: .25rem;
+    & p {
+      margin: unset;
+    }
+  }
+  &__name {
+    background-color: rgba(0, 0, 0, .5);
+    padding-inline: 1rem;
+    position: absolute;
+    left: 5.5rem;
+    right: 0;
+    top: 1rem;
+    color: white;
+    border-radius: 1rem 0 0 1rem;
+    font-size: 18pt;
+    padding-block: 1rem;
+    &.long-name {
+      font-size: 14pt;
+      text-wrap: balance;
+    }
+  }
+  &__category {
+    background-color: var(--army-color);
+    color: var(--color-text);
+    text-orientation: mixed;
+    writing-mode: vertical-lr;
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    width: 3rem;
+    height: calc(100% - 12rem);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 1rem 1rem 0 0;
+    padding-top: 2rem;
+    font-size: 14pt;
+    box-shadow: .5rem 0 1rem rgba(0, 0, 0, .75);
+    font-weight: 700;
+    & p {
+      transform: rotate(180deg);
+    }
+  }
+  &__special-rules {
+    font-size: 10pt;
+    margin-top: .25rem;
+  }
+  &__options {
+    margin-top: .5rem;
+    display: grid;
+    gap: .5rem;
+  }
+
+  .advance,
+  .charge,
+  .discipline {
+    grid-row: 1;
+  }
+
+  .health-points,
+  .defense,
+  .resiliance,
+  .armour {
+    grid-row: 2;
+  }
+
+  .attacks,
+  .offensive,
+  .strength,
+  .armour-piercing,
+  .agility {
+    grid-row: 3;
+  }
+}
+
+
+
+@media print {
+  @page {
+      size: landscape
+    }
+  header, nav, footer, .generator-settings {
+    display: none;
+  }
+  body {
+    print-color-adjust: exact;
+    margin: 0;
+    padding: 0;
+  }
+  .army-list {
+    max-width: unset;
+    margin-inline: unset;
+    gap: 1.5mm;
+    grid-template-columns: repeat(3, var(--card-width));
+    justify-content: space-between;
+  }
+  .unit-card__options {
+    display: none;
+  }
+  // Hide unchecked entries
+  .unit-card:has(.unit-card__include-option:not(:checked)) {
+    display: none;
+  }
+}
