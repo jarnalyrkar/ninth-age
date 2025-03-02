@@ -14,25 +14,77 @@
   {{ partial:navigation }}
   <div class="generator-settings">
     <div class="generator-settings__inner">
-      <select id="version-select">
-        <option disabled selected hidden>Select Rule Version</option>
-        {{ versions }}
-          {{ if game == 'ninthAge' }}
-            <option value="{{ id }}">{{ name }}</option>
-          {{ /if }}
-        {{ /versions }}
-      </select>
-      <select id="army-select">
-        <option disabled selected hidden>Select Army</option>
-      </select>
-      <select id="army-sub-version-select">
-        <option disabled selected hidden>Select Army Version</option>
-      </select>
-      <input type="color">
+      <div class="generator-settings__rules">
+        <h2 class="generator-settings__section-heading">Ruleset selection</h2>
+        <div class="generator-settings__row">
+          <label>
+            <p class="generator-settings__heading">T9A Version</p>
+            <select id="version-select">
+              <option disabled selected hidden>Select Rule Version</option>
+              {{ versions }}
+              {{ if game == 'ninthAge' }}
+                <option value="{{ id }}">{{ name }}</option>
+              {{ /if }}
+              {{ /versions }}
+            </select>
+          </label>
+          <label>
+            <p class="generator-settings__heading">Army</p>
+            <select id="army-select">
+              <option disabled selected hidden>Select Army</option>
+            </select>
+          </label>
+          <label>
+            <p class="generator-settings__heading">Army Rules Version</p>
+            <select id="army-sub-version-select">
+              <option disabled selected hidden>Select Army Version</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div class="generator-settings__styles generator-settings__styles--hidden">
+        <h2 class="generator-settings__section-heading">Style settings</h2>
+        <div class="generator-settings__row image">
+          <label class="default-image">
+            <p class="generator-settings__heading">Image</p>
+            <input id="default-image" type="file" accept="image/png, image/jpeg">
+          </label>
+          <div class="global__image-position">
+            <p class="generator-settings__heading">Image position</p>
+            <label>X <input id="global-image-x" type="number" min="0" max="100" value="50"></label>
+            <label>Y <input id="global-image-y" type="number" min="0" max="100" value="50"></label>
+          </div>
+          </div>
+          <div class="generator-settings__row color">
+            <label class="global-color">
+              <p class="generator-settings__heading">Color</p>
+              <input type="color" value="#2F394C">
+            </label>
+            <label class="mix-image-toggle">
+              <p class="generator-settings__heading">Color mixing</p>
+              <input id="mix-image-toggle" type="checkbox">
+              Mix colour with image<br>
+            </label>
+            <label class="transparency-toggle">
+              <p class="generator-settings__heading">Transparency</p>
+              <input id="global-transparency-toggle" type="checkbox" checked>
+              Toggle transparency
+            </label>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
     <main>
+      <div class="loader loader--hidden">
+        <div class="loader__inner">
+          {{ svg:anvil-impact }}
+          <ul class="loader__statements">
+            {{ partial:generator/loading_statements }}
+          </ul>
+        </div>
+      </div>
       <div id="army-list" class="army-list"></div>
     </main>
 

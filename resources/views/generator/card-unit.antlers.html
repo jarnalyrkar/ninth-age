@@ -1,70 +1,41 @@
   <article class="unit-card">
     <div class="unit-card__inner" style="background-image: url(); background-position-x: 50%; background-position-y: 50%;">
-      <div class="unit-card__icon"><img></div>
-      <p class="unit-card__name"></p>
-      <div class="unit-card__category">
-        <p></p>
-      </div>
-      <div class="unit-card__details">
-        <dl class="unit-card__stats">
-          <div class="charge">
-            <dt>Cha</dt><dd class="unit-card__charge"></dd>
+      <div class="unit-card__icon"><img width="30" height="30"></div>
+      <header class="unit-card__header">
+        <div class="unit-card__header-inner">
+          <p class="unit-card__name"></p>
+          <div class="unit-card__category">
+            <p></p>
           </div>
-          <div class="advance">
-            <dt>Adv</dt><dd class="unit-card__advance"></dd>
-          </div>
-          <div class="courage">
-            <dt>Cou</dt><dd class="unit-card__courage"></dd>
-          </div>
-          <div class="health-points">
-            <dt>HP</dt><dd class="unit-card__health-points"></dd>
-          </div>
-          <div class="defense">
-            <dt>Def</dt><dd class="unit-card__defense"></dd>
-          </div>
-          <div class="resiliance">
-            <dt>Res</dt><dd class="unit-card__resiliance"></dd>
-          </div>
-          <div class="armour">
-            <dt>Arm</dt><dd class="unit-card__armour"></dd>
-          </div>
-          <div class="attacks">
-            <dt>Att</dt><dd class="unit-card__attacks"></dd>
-           </div>
-          <div class="offensive">
-            <dt>Off</dt><dd class="unit-card__offensive-skill"></dd>
-          </div>
-          <div class="strength">
-            <dt>Str</dt><dd class="unit-card__strength"></dd>
-           </div>
-          <div class="armour-piercing">
-            <dt>AP</dt><dd class="unit-card__armour-piercing"></dd>
-          </div>
-          <div class="agility">
-            <dt>Agi</dt><dd class="unit-card__agility"></dd>
-          </div>
-        </dl>
+        </div>
         <div class="unit-card__meta">
           <p>Base: <span class="unit-card__base"></span></p>
           <p>Size: <span class="unit-card__size"></span></p>
-          {{# <p>Type: <span class="unit-card__type"></span></p> #}}
         </div>
-        <div class="unit-card__special-rules"></div>
+      </header>
+      <div class="unit-card__details">
+        {{ partial:generator/characteristics-table }}
       </div>
     </div>
     <div class="unit-card__options">
       <label><input class="unit-card__include-option" type="checkbox" checked>Include in print</label>
-      <div>
-        <input type="file" accept="image/png, image/jpeg">
-        <button class="remove-image-button hidden">X</button>
-        <div class="bg-pos-tools hidden">
+      <div class="unit-card__style">
+        <div class="unit-card__image">
+          <input type="file" accept="image/png, image/jpeg">
+          <button class="remove-image-button">X</button>
+        </div>
+        <div class="unit-card__image-position">
           <label>
-            <input class="bg-pos-x" type="number" min="0" max="100" value="50">
-            Image X
+            X<input class="bg-pos-x" type="number" min="0" max="100" value="50">
           </label>
           <label>
-            <input class="bg-pos-y" type="number" min="0" max="100" value="50">
-            Image Y
+            Y<input class="bg-pos-y" type="number" min="0" max="100" value="50">
+          </label>
+        </div>
+        <div class="unit-card__color-mix">
+          <label>
+            <input type="checkbox" class="mix-background">
+            Mix image with army colour
           </label>
         </div>
       </div>
