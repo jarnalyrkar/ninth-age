@@ -5,16 +5,10 @@
       <a class="forum-news__archive" target="_blank" href="{{ archive_link }}">{{ archive_label }}{{ svg:link-external }}</a>
     </header>
     <div class="forum-news__list">
-      {{ forum_news }}
-        <article class="forum-news__item">
-          {{ svg:link-external class="forum-news__external-icon" }}
-          <p class="forum-news__item-date">{{ date |iso_format('DD MMM') }}</p>
-          <h3 class="forum-news__item-heading">{{ title }}</h3>
-          <div class="forum-news__item-teaser">{{ content | strip_tags | safe_truncate(150, '...') }}</div>
-          <a class="forum-news__item-link" target="_blank" href="{{ url }}"></a>
-        </article>
+      {{ forum_news limit="4" }}
+        {{ partial:modules/partials/news-card }}
       {{ /forum_news }}
-      <button id="news-scroll-button">&gt;</button>
     </div>
   </div>
 </section>
+

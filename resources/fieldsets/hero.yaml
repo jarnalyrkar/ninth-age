@@ -5,6 +5,13 @@ fields:
     field:
       type: text
       display: Heading
+      localizable: false
+  -
+    handle: subheading
+    field:
+      type: text
+      display: Subheading
+      localizable: false
   -
     handle: background_image
     field:
@@ -12,25 +19,4 @@ fields:
       container: assets
       type: assets
       display: 'Background image'
-  -
-    handle: news_section
-    field:
-      type: section
-      display: 'News section'
-  -
-    handle: news_heading
-    field:
-      type: text
-      display: 'News Heading'
-  -
-    handle: archive_label
-    field:
-      type: text
-      display: 'Archive Label'
-      width: 50
-  -
-    handle: archive_link
-    field:
-      type: link
-      display: 'Archive Link'
-      width: 50
+      localizable: false

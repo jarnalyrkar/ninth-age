@@ -19,3 +19,52 @@ fields:
         - anchor
         - image
         - table
+        - custom_id
+      localizable: false
+      container: assets
+      collapse: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            lead_paragraph:
+              display: 'Lead Paragraph'
+              fields:
+                -
+                  handle: lead_paragraph
+                  field:
+                    buttons:
+                      - bold
+                      - italic
+                      - removeformat
+                      - anchor
+                    remove_empty_nodes: false
+                    type: bard
+                    display: 'Lead paragraph'
+                    localizable: false
+            image:
+              display: Image
+              fields:
+                -
+                  handle: image
+                  field:
+                    container: assets
+                    show_set_alt: false
+                    type: assets
+                    display: Image
+                    localizable: false
+                    width: 50
+                    mode: grid
+                -
+                  handle: alt_text
+                  field:
+                    type: text
+                    display: 'Alt text'
+                    localizable: false
+                    width: 50
+                -
+                  handle: caption
+                  field:
+                    type: textarea
+                    display: Caption
+                    localizable: false

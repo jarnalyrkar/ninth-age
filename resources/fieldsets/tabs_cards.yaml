@@ -5,12 +5,14 @@ fields:
     field:
       type: text
       display: Heading
+      localizable: false
   -
     handle: cards
     field:
       type: replicator
       display: Cards
       collapse: true
+      localizable: false
       sets:
         new_set_group:
           display: 'New Set Group'
@@ -23,12 +25,37 @@ fields:
                   field:
                     type: text
                     display: 'Tab name'
+                    localizable: false
                 -
                   handle: content
                   field:
                     remove_empty_nodes: false
                     type: bard
                     display: Content
+                    localizable: false
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        sets:
+                          button:
+                            display: Button
+                            fields:
+                              -
+                                handle: label
+                                field:
+                                  type: text
+                                  display: Label
+                                  validate:
+                                    - required
+                                  localizable: false
+                              -
+                                handle: link
+                                field:
+                                  type: link
+                                  display: Link
+                                  validate:
+                                    - required
+                                  localizable: false
                 -
                   handle: image
                   field:
@@ -36,3 +63,4 @@ fields:
                     container: assets
                     type: assets
                     display: Image
+                    localizable: false

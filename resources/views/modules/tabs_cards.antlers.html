@@ -14,10 +14,21 @@
     </div>
     <div class="tabs-cards__cards">
       {{ cards }}
-        <article class="tabs-cards__card {{ first ? 'tabs-cards__card--active' : '' }}" data-tab="{{ tab_name|slugify }}">
-          <div class="tabs-cards__card-content">{{ content }}</div>
-          <div class="tabs-cards__image-container">
-            <img class="tabs-cards__image" src="{{ image }}">
+        <article class="tabs-card {{ first ? 'tabs-card--active' : '' }}" data-tab="{{ tab_name|slugify }}">
+          <div class="tabs-card__content">
+            {{ content }}
+              {{ if type == 'text' }}
+                {{ text }}
+              {{ /if }}
+              {{ if type == 'button' }}
+              <div class="button__container">
+                <a class="button" href="{{ link }}">{{ label }}</a>
+              </div>
+              {{ /if }}
+            {{ /content }}
+          </div>
+          <div class="tabs-card__image-container">
+            <img class="tabs-card__image" src="{{ image }}">
           </div>
         </article>
       {{ /cards }}

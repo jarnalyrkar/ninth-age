@@ -1,0 +1,9 @@
+<figure class="content-image">
+  {{ image }}
+    <img src="{{ url }}" alt="{{ alt_text }}">
+  {{ /image }}
+
+  {{ if caption }}
+    <figcaption>{{ caption|nl2br }}</figcaption>
+  {{ /if }}
+</figure>

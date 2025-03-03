@@ -1,0 +1,42 @@
+@use '../../base' as *;
+.tabs-card {
+  display: none;
+  font-size: var(--fs-md);
+  transition: opacity 1000ms;
+
+  & h2 {
+    font-size: var(--fs-lg);
+    padding-bottom: 1rem;
+  }
+
+  &--active {
+    display: grid;
+
+    @media(min-width: $large) {
+      grid-template-columns: 3fr 1fr 3fr;
+    }
+  }
+
+  &__image-container {
+    @media(min-width: $large) {
+      grid-column: 3;
+    }
+
+    @media(max-width: $large) {
+      padding-top: 2rem;
+    }
+  }
+
+  &__image {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  &__content {
+    p + .button__container {
+      margin-top: 2rem;
+    }
+  }
+}

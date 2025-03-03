@@ -1,15 +1,19 @@
 @use '../base' as *;
+@use 'components/news-card';
 
 .forum-news {
+  background-color: var(--color-main);
+  color: white;
   &__inner {
-    padding-block: var(--module-spacing);
+    padding-block: calc(var(--module-spacing) / 2);
+    width: min(100%, var(--container));
+    margin-inline: auto;
   }
   &__header {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     padding-bottom: 1rem;
-    max-width: min(100vw, var(--container));
     @media(max-width: $large) {
       flex-wrap: wrap;
       row-gap: 1rem;
@@ -35,93 +39,7 @@
   &__list {
     gap: 1rem;
     display: grid;
-    grid-template-columns: repeat(10, 20rem);
-    overflow-x: scroll;
-    scrollbar-width: 0;
-    scroll-snap-type: x mandatory;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
     padding-block: .5rem;
-    position: relative;
-    max-width: calc(100vw - (100vw - var(--container))/2);
-    @media(hover: hover) {
-      &:hover #news-scroll-button {
-        opacity: 1;
-      }
-    }
-  }
-  &__link {
-    display: block;
-    height: 100%;
-    position: relative;
-    background-color: color-mix(in srgb, var(--color-main) 100%, transparent 25%);
-    backdrop-filter: blur(3px);
-    padding: 1rem;
-    border-radius: 1rem;
-    transition: background-color 300ms, transform 1s;
-    scroll-snap-align: center;
-    text-decoration: none;
-    color: white;
-    &:hover {
-      transform: translateY(-.5rem);
-    }
-    &:hover .forum-news__item-heading {
-      color: var(--color-accent);
-    }
-    &:first-of-type {
-      @media(max-width: $large) {
-        margin-left: 1rem;
-      }
-    }
-    &:last-of-type {
-      @media(max-width: $large) {
-        margin-right: 1rem;
-      }
-    }
-  }
-  &__item-heading {
-    transition: color 300ms;
-    font-weight: 400;
-    padding-right: 1.5rem;
-    text-transform: unset;
-  }
-  &__item-date {
-    padding-bottom: 1rem;
-    font-weight: 700;
-    &::after {
-      content: ': ';
-    }
-  }
-  &__external-icon {
-    width: 1rem;
-    height: 1rem;
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-  }
-  & #news-scroll-button {
-    margin-block: auto;
-    height: auto;
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 1.25rem;
-    background-color: var(--color-main);
-    border: 1px solid var(--color-accent);
-    line-height: 1;
-    color: var(--color-main-light-900);
-    border-radius: 50%;
-    cursor: pointer;
-    font-weight: 900;
-    transition: opacity 150ms, background-color 300ms;
-    position: sticky;
-    left: 0;
-    display: none;
-    @media(hover: hover) {
-      display: block;
-    }
-    &:hover {
-      background-color: var(--color-accent-400);
-    }
-    &:active {
-      background-color: var(--color-accent-800);
-    }
   }
 }

@@ -12,3 +12,4 @@ Statamic.booting(() => {
 });
 
 */
+import './bard';

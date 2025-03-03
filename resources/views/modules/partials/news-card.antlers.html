@@ -1,0 +1,7 @@
+<a class="news-card" href="{{ url }}" target="_blank">
+  <header>
+    <p class="news-card__date">{{ trans:ninthage.published }} {{ date |iso_format('DD.MM.YYYY') }}</p>
+    <h3 class="news-card__heading">{{ title }}</h3>
+  </header>
+  <div class="news-card__teaser">{{ content | strip_tags | safe_truncate(150, '...') }}</div>
+</a>

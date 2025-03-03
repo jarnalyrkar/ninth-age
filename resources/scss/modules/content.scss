@@ -1,8 +1,6 @@
 @use '../base' as *;
 
 .content {
-  background-color: var(--color-main);
-  color: var(--color-accent-900);
   padding-block: var(--module-spacing);
   font-size: 1.125rem;
   &__outer {
@@ -26,10 +24,39 @@
     font-size: var(--fs-sm);
   }
   & h1, h2, h3 {
-    color: var(--color-accent);
-    padding-bottom: .5rem;
+    color: var(--color-main);
+    margin-bottom: .5rem;
   }
   & * + h2, * + h3 {
-    padding-top: 2rem;
+    margin-top: 2rem;
+  }
+  & a {
+    position: relative;
+    text-decoration: none;
+    isolation: isolate;
+    background: linear-gradient(0deg, var(--color-main), var(--color-main)) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 200ms, color 200ms;
+    text-decoration: underline;
+    --bg-h: 100%;
+    @media(hover: hover) {
+      &:hover {
+        color: white;
+        text-decoration: none;
+        background-size: 100% var(--bg-h);
+        background-position-x: left;
+      }
+    }
+  }
+  &-image {
+    margin-block: 2rem;
+    & img {
+      vertical-align: middle;
+      border-radius: 1rem;
+    }
+    & figcaption {
+      padding-top: .5rem;
+      font-size: .85rem;
+      font-style: italic;
+    }
   }
 }

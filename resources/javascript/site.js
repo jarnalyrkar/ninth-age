@@ -60,4 +60,7 @@ if (armiesList) {
   armyButtonListener(armiesList)
 }
 
-cardGenerator()
+const isCardGeneratorPage = document.querySelector('main.card-generator')
+if (isCardGeneratorPage) {
+  cardGenerator()
+}

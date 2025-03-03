@@ -15,6 +15,10 @@ class ForumNews extends Tags
     public function index()
     {
         $feed = new SimplePie();
+        $limit = 10;
+        if ($this->params->get('limit')) {
+          $limit = $this->params->get('limit');
+        }
 
         $feed->set_feed_url(array(
             'https://community.the-ninth-age.com/news/news-feed/?at=8366-dfb85073ce90941ea799071a1174d2347960776d'
@@ -22,7 +26,7 @@ class ForumNews extends Tags
         $feed->enable_cache(false);
         $feed->init();
         $data = [];
-        foreach($feed->get_items(0, 10) as $item) {
+        foreach($feed->get_items(0, $limit) as $item) {
           $data[] = [
             'title' => $item->get_title(),
             'url' => $item->get_permalink(),

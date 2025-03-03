@@ -3,10 +3,13 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Statamic\Statamic;
+use JackSleight\StatamicBardMutator\Facades\Mutator;
+use Illuminate\Support\Str;
 
 class AppServiceProvider extends ServiceProvider
 {
+
+
     /**
      * Register any application services.
      *
@@ -24,7 +27,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // Statamic::script('app', 'cp');
-        // Statamic::style('app', 'cp');
+      Mutator::html('heading', function ($value, $item) {
+          if ($item->attrs->level === 2) {
+              $value[1]['id'] = Str::slug(collect($item->content)->implode('text', ''));
+          }
+          return $value;
+      });
     }
 }

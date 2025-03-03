@@ -111,5 +111,8 @@ return [
     'php_max_execution_time' => '-1',
     'ajax_timeout' => '600000',
     'pcre_backtrack_limit' => '-1',
-
+    /**
+     * Enable multisite
+     */
+    'multisite' => true,
 ];

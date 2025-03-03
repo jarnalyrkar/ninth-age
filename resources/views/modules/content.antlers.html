@@ -2,6 +2,12 @@
   <div class="content__outer">
     <div class="content__inner">
       {{ content }}
+        {{ if type == 'text' }}
+          {{ text }}
+        {{ else }}
+          {{ partial src="modules/partials/content-{type}" }}
+        {{ /if }}
+      {{ /content }}
     </div>
   </div>
 </section>

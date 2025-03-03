@@ -1,0 +1,33 @@
+@use '../../base' as *;
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color-main-light-100);
+  padding: 1rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  transition: background-color 300ms;
+  @media(hover: hover) {
+    &:hover {
+      background-color: var(--color-main-light-200);
+    }
+  }
+  &__heading {
+    font-weight: 400;
+    text-transform: unset;
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+    text-wrap: balance;
+  }
+  &__date {
+    font-weight: 400;
+    font-size: .825rem;
+    color: rgba(255,255,255,.5);
+    padding-bottom: .25rem;
+  }
+  &__link {
+    text-decoration: none;
+  }
+}
