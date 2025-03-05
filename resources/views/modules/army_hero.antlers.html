@@ -1,0 +1,16 @@
+<section class="army-hero">
+  <div class="army-hero__inner">
+    <h1 class="army-hero__heading">{{ heading }}</h1>
+    <div class="army-hero__body">{{ body }}</div>
+    {{ if buttons }}
+      <div class="army-hero__buttons">
+        {{ buttons }}
+          {{ partial:modules/partials/button }}
+        {{ /buttons }}
+      </div>
+    {{ /if }}
+    {{ images }}
+      <img class="army-hero__image" data-index="{{ count }}" src="{{ url }}" alt="{{ alt }}">
+    {{ /images }}
+  </div>
+</section>

@@ -3,28 +3,47 @@
 .content {
   padding-block: var(--module-spacing);
   font-size: 1.125rem;
+  background-color: var(--color-main);
+  color: white;
+  & ::selection {
+    color: var(--color-main);
+    background-color: white;
+  }
+  @media(max-width: $small) {
+    padding-inline: 1rem;
+  }
   &__outer {
+    max-width: var(--container);
+    margin-inline: auto;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    @include container;
+    @media(min-width: $large) {
+      grid-template-columns: repeat(12, 1fr);
+    }
   }
   &__inner {
-    grid-column: 4 / span 5;
+    @media(min-width: $medium) {
+      grid-column: 2 / span 8;
+    }
+    @media(min-width: $large) {
+      grid-column: 3 / span 7;
+    }
+    @media(min-width: $xlarge) {
+      grid-column: 4 / span 6;
+    }
   }
   & h1, h2, h3, h4, h5, h6 {
     text-transform: unset,
   }
   & h1 {
-    font-size: var(--fs-lg);
+    font-size: var(--fs-xl);
   }
   & h2 {
-    font-size: var(--fs-md);
+    font-size: var(--fs-lg);
   }
   & h3 {
-    font-size: var(--fs-sm);
+    font-size: var(--fs-md);
   }
   & h1, h2, h3 {
-    color: var(--color-main);
     margin-bottom: .5rem;
   }
   & * + h2, * + h3 {
@@ -34,13 +53,15 @@
     position: relative;
     text-decoration: none;
     isolation: isolate;
-    background: linear-gradient(0deg, var(--color-main), var(--color-main)) no-repeat right bottom / 0 var(--bg-h);
+    background: linear-gradient(0deg, white, white) no-repeat right bottom / 0 var(--bg-h);
     transition: background-size 200ms, color 200ms;
     text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-style: dotted;
     --bg-h: 100%;
     @media(hover: hover) {
       &:hover {
-        color: white;
+        color: var(--color-main);
         text-decoration: none;
         background-size: 100% var(--bg-h);
         background-position-x: left;
@@ -57,6 +78,15 @@
       padding-top: .5rem;
       font-size: .85rem;
       font-style: italic;
+      grid-column: 1 / -1;
+    }
+    &--grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .5rem;
+      & :nth-last-child(2):nth-child(odd) {
+        grid-column: 1 / -1;
+      }
     }
   }
 }

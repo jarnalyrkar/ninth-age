@@ -1,0 +1,105 @@
+@use '../base' as *;
+
+.army-hero {
+  padding-block: var(--module-spacing);
+  color: white;
+  background: var(--color-main);
+  @media(min-width: $large) {
+    padding-top: calc(var(--module-spacing) * 2); // To account for offset of second image
+  }
+  &__inner {
+    max-width: var(--container);
+    margin-inline: auto;
+    display: grid;
+    align-items: start;
+    column-gap: 1rem;
+    grid-template-columns: 1fr;
+    @media(min-width: $large) {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+  }
+  &__heading {
+    grid-row: 1;
+    font-size: var(--fs-xxxl);
+    @media(max-width: $small) {
+      padding-inline: 1rem;
+    }
+    @media(min-width: $large) {
+      font-size: var(--fs-xl);
+      grid-row: unset;
+      grid-column: 1 / 6;
+    }
+    @media(min-width: $xxlarge) {
+      font-size: var(--fs-xxxl);
+    }
+  }
+  &__body {
+    grid-row: 3;
+    margin-top: 1.5rem;
+    font-size: var(--fs-md);
+    @media(max-width: $small) {
+      padding-inline: 1rem;
+    }
+    @media(min-width: $large) {
+      font-size: var(--fs-base);
+    }
+    @media(min-width: $large) {
+      grid-row: unset;
+      grid-column: 1 / 6;
+    }
+    @media(min-width: $xxlarge) {
+      font-size: var(--fs-md);
+    }
+  }
+  &__buttons {
+    grid-row: 4;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    text-align: center;
+    padding-block: 2rem;
+    gap: 1rem;
+    @media(max-width: $small) {
+      padding-inline: 1rem;
+    }
+    @media(min-width: $large) {
+      grid-row: unset;
+      grid-column: 1 / 6;
+    }
+    @media(min-width: $xxlarge) {
+      margin-top: 2.5rem;
+      display: flex;
+    }
+    & :first-child {
+      grid-column: span 2;
+    }
+  }
+  &__image {
+    width: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+    aspect-ratio: 1;
+    height: 100%;
+    @media(min-width: $large) {
+      aspect-ratio: 2/3;
+      border-radius: 1rem;
+    }
+  }
+  &__image[data-index="1"] {
+    grid-row: 2;
+    padding-top: 2rem;
+    @media(min-width: $large) {
+      padding-top: unset;
+      grid-row: 1 / 5;
+      grid-column: 7 / 10;
+      margin-bottom: -6rem;
+    }
+  }
+  &__image[data-index="2"] {
+    grid-row: 5;
+    @media(min-width: $large) {
+      grid-row: 1 / 5;
+      grid-column: 10 / -1;
+      margin-top: -6rem;
+    }
+  }
+}

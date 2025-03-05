@@ -6,6 +6,7 @@ fields:
       type: replicator
       display: Modules
       collapse: true
+      localizable: false
       sets:
         new_set_group:
           display: 'New Set Group'
@@ -40,3 +41,18 @@ fields:
               fields:
                 -
                   import: armies_list
+            army_hero:
+              display: 'Army Hero'
+              fields:
+                -
+                  import: army_hero
+            lerp_gallery:
+              display: 'Lerp Gallery'
+              fields:
+                -
+                  import: lerp_gallery
+            half_image_half_text:
+              display: 'Half Image, Half Text'
+              fields:
+                -
+                  import: half_image_half_text

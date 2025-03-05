@@ -41,21 +41,7 @@ fields:
                             display: Button
                             fields:
                               -
-                                handle: label
-                                field:
-                                  type: text
-                                  display: Label
-                                  validate:
-                                    - required
-                                  localizable: false
-                              -
-                                handle: link
-                                field:
-                                  type: link
-                                  display: Link
-                                  validate:
-                                    - required
-                                  localizable: false
+                                import: button
                 -
                   handle: image
                   field:

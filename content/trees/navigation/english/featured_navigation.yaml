@@ -3,13 +3,15 @@ tree:
     id: f5fc4c35-5715-497e-97ba-d47d571fa4b2
     entry: b139f9be-a614-4407-840a-76c31fd6d2e8
   -
-    id: 2f902490-b26e-44f5-b79d-2e9225b61a35
-    title: 'The World of 9th Age'
-    url: '#'
+    id: 42d208c6-d44a-42f2-abcf-2c959c0c0402
+    entry: 6be30cad-dd51-4835-8779-7d7455147eb3
   -
-    id: 5ba930fc-5294-437c-92f8-c6ec99683148
+    id: 45549be6-5a52-4563-b064-34acc93fd5a3
+    entry: b215bef1-5b14-4d8e-baa4-7a67e71fd444
+  -
+    id: b1e43e9a-9052-4f55-a334-f654a37f3425
     title: Rulebooks
-    url: '#'
+    url: 'https://community.the-ninth-age.com/wcf/downloads/'
   -
     id: 840fc889-ab13-4db7-bec2-5cfed6e19c6f
     title: Forums

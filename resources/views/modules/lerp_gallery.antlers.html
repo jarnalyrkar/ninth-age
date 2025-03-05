@@ -1,0 +1,47 @@
+<section class="lerp-gallery">
+  <div class="lerp-gallery__inner">
+    <div class="lerp-gallery__images">
+      {{ images }}
+        <div class="lerp-gallery__image-container">
+          <img class="lerp-gallery__image" src="{{ url }}" alt="{{ alt }}">
+        </div>
+      {{ /images }}
+    </div>
+  </div>
+</section>
+
+<script>
+  function lerp(start, end, t) {
+      return start * (1 - t) + end * t;
+    }
+
+    let smoothScrollY = window.scrollY;
+    const lerpFactor = 0.08; // Lower = smoother
+
+    const wrappers = document.querySelectorAll('.lerp-gallery__image-container');
+
+    function updateScroll() {
+      // Smooth interpolation
+      smoothScrollY = lerp(smoothScrollY, window.scrollY, lerpFactor);
+
+      wrappers.forEach((wrapper, index) => {
+        const rect = wrapper.getBoundingClientRect();
+        const center = window.innerHeight / 2;
+        const distance = rect.top + rect.height / 2 - center;
+
+        // Opacity fading in and out
+        const maxDistance = window.innerHeight / 1.2;
+        let opacity = 1 - Math.abs(distance / maxDistance);
+        opacity = Math.max(0, Math.min(1, opacity));
+
+        // Apply smooth transform with a slight overshoot
+        const overshoot = distance * 0.50; // The higher this is, the more overshoot
+        wrapper.style.opacity = opacity;
+        wrapper.querySelector('img').style.transform = `translateY(${overshoot}px) scale(${1.1 - opacity * 0.1})`;
+      });
+
+      requestAnimationFrame(updateScroll);
+    }
+
+    updateScroll(); // Start animation loop
+</script>

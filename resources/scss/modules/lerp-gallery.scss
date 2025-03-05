@@ -1,0 +1,48 @@
+@use '../base' as *;
+
+.lerp-gallery {
+  padding-block: var(--module-spacing);
+  background-color: var(--color-main);
+  &::before {
+    content: '';
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(47, 57, 76, 1) 75%);
+    height: var(--module-spacing);
+    display: block;
+  }
+  &::after {
+    content: '';
+    display: block;
+    height: var(--module-spacing);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(47, 57, 76, 1) 75%);
+  }
+  &__inner {
+    padding-block: var(--module-spacing);
+    background-color: black;
+  }
+  &__images {
+    max-width: var(--container);
+    margin-inline: auto;
+  }
+  &__image-container {
+    height: 100vh;
+    display: grid;
+    justify-content: start;
+    &:nth-child(even) {
+      justify-content: end;
+    }
+  }
+  &__image {
+    width: 80%;
+    height: 80%;
+    margin-inline: auto;
+    border-radius: 2rem;
+    vertical-align: middle;
+    object-fit: cover;
+    transform: scale(1.2);
+    transition: transform 0.5s ease-out;
+    aspect-ratio: 1;
+    @media(min-width: $large) {
+      aspect-ratio: 16/9;
+    }
+  }
+}

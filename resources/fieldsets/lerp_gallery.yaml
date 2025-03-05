@@ -1,0 +1,14 @@
+title: 'Lerp Gallery'
+fields:
+  -
+    handle: images
+    field:
+      container: assets
+      type: assets
+      display: Images
+      localizable: false
+      min_files: 1
+      validate:
+        - required
+      max_files: 5
+      mode: grid

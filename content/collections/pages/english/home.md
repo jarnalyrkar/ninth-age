@@ -3,7 +3,7 @@ id: home
 blueprint: pages
 title: Home
 updated_by: 9da3c936-f032-4fc4-95ba-d7d71ca81a34
-updated_at: 1741042899
+updated_at: 1741212908
 modules:
   -
     id: m0bgapwc
@@ -148,6 +148,7 @@ modules:
     id: m321d3t6
     type: armies_list
     enabled: true
+    layout: module
   -
     id: m0fgtrhv
     heading: 'Start your Ninth Age Journey'
@@ -160,7 +161,7 @@ modules:
         type: new_card
         enabled: true
         image: 20221203_144520.jpg
-        link: '#'
+        link: 'entry::b139f9be-a614-4407-840a-76c31fd6d2e8'
       -
         id: m0fguy4k
         super: 'Next Steps'
@@ -169,7 +170,7 @@ modules:
         type: new_card
         enabled: true
         image: skaven_bataille_final_1024_web16-9.jpg
-        link: '#'
+        link: 'entry::6be30cad-dd51-4835-8779-7d7455147eb3'
       -
         id: m0fgvfti
         super: 'Next Steps'
@@ -178,7 +179,7 @@ modules:
         type: new_card
         enabled: true
         image: art_cover_frb-16-9.jpg
-        link: '#'
+        link: 'entry::b215bef1-5b14-4d8e-baa4-7a67e71fd444'
     type: cards
     enabled: true
     background_image: art_army_ud_26_army-of-the-dead.jpg

@@ -1,2 +1,16 @@
 title: 'Armies List'
-fields: {  }
+fields:
+  -
+    handle: layout
+    field:
+      options:
+        -
+          key: module
+          value: Module
+        -
+          key: full_page
+          value: 'Full page'
+      default: module
+      type: select
+      display: Layout
+      localizable: false

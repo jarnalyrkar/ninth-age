@@ -1,0 +1,41 @@
+title: 'Half Image, Half Text'
+fields:
+  -
+    handle: flip_layout
+    field:
+      type: toggle
+      display: 'Flip Layout'
+      localizable: false
+  -
+    handle: image
+    field:
+      max_files: 1
+      min_files: 1
+      container: assets
+      type: assets
+      display: Image
+      localizable: false
+  -
+    handle: content
+    field:
+      buttons:
+        - h2
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - anchor
+      remove_empty_nodes: false
+      type: bard
+      display: Content
+      localizable: false
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            button:
+              display: Button
+              fields:
+                -
+                  import: button

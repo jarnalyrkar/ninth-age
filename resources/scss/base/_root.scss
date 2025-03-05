@@ -52,11 +52,11 @@
   --container: 100%;
   --module-spacing: 3rem;
   @media(min-width: $medium) {--module-spacing: 6rem;}
-  @media(min-width: $small) {--container: 33.75em;}
-  @media(min-width: $medium) {--container: 45em;}
-  @media(min-width: $large) {--container: 60em;}
-  @media(min-width: $xlarge) {--container: 71.25em}
-  @media(min-width: $xxlarge) {--container: 82.5em;}
+  @media(min-width: $small) {--container: 33.75rem;}
+  @media(min-width: $medium) {--container: 45rem;}
+  @media(min-width: $large) {--container: 60rem;}
+  @media(min-width: $xlarge) {--container: 71.25rem}
+  @media(min-width: $xxlarge) {--container: 82.5rem;}
   @media(min-width: $xxxlarge) {--container: 108rem;}
 
 

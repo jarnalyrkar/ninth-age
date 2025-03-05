@@ -1,0 +1,20 @@
+title: Button
+fields:
+  -
+    handle: label
+    field:
+      type: text
+      display: Label
+      localizable: false
+      width: 50
+      validate:
+        - required
+  -
+    handle: link
+    field:
+      type: link
+      display: Link
+      localizable: false
+      width: 50
+      validate:
+        - required

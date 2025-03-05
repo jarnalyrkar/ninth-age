@@ -107,6 +107,7 @@
   &__statements li {
     transition: 300ms opacity, 500ms transform;
     width: fit-content;
+    white-space: nowrap;
   }
   &__statements li:not(.active) {
     opacity: 0;

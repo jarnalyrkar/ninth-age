@@ -277,7 +277,7 @@ function outputUnits(units) {
 
     clone.querySelector('.unit-card__charge').innerHTML = replaceAsCharacter(unit.carac.adv) + (replaceAsCharacter(unit.carac.adv) != 'mount' ? "\"" : '')
     clone.querySelector('.unit-card__mobility').innerHTML = replaceAsCharacter(unit.carac.mar) + (replaceAsCharacter(unit.carac.mar) != 'mount' ? "\"" : '');
-    clone.querySelector('.unit-card__courage').innerHTML = replaceAsCharacter(unit.carac.dis);
+    clone.querySelector('.unit-card__discipline').innerHTML = replaceAsCharacter(unit.carac.dis);
     clone.querySelector('.unit-card__health-points').innerHTML = replaceAsCharacter(unit.carac.hp);
     clone.querySelector('.unit-card__defense').innerHTML = replaceAsCharacter(unit.carac.def);
     clone.querySelector('.unit-card__resilience').innerHTML = replaceAsCharacter(unit.carac.res);

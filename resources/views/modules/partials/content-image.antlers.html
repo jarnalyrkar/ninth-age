@@ -1,4 +1,4 @@
-<figure class="content-image">
+<figure class="content-image{{ if image|length > 1 }} content-image--grid{{ /if }}">
   {{ image }}
     <img src="{{ url }}" alt="{{ alt_text }}">
   {{ /image }}

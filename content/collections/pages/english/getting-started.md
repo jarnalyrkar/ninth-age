@@ -131,21 +131,13 @@ modules:
       -
         type: set
         attrs:
-          id: m7to5zc2
-          values:
-            type: image
-            image:
-              - getting-started/dsc_0085.jpg
-            alt_text: 'Unpainted table'
-      -
-        type: set
-        attrs:
           id: m7to79te
           values:
             type: image
             image:
+              - getting-started/dsc_0085.jpg
               - getting-started/dsc_0088.jpg
-            alt_text: 'Painted table with basic terrain'
+            alt_text: 'Before and after painting'
             caption: 'A coat of paint does wonders'
       -
         type: heading
@@ -160,7 +152,7 @@ modules:
         content:
           -
             type: text
-            text: 'For all intents an purposes, terrain could be printed out on paper, but thats not very evocative, is it? Terrain can be bought, or you can make your own. There are loads of resources online, and also books on the subject. Much knowledge can be transferred from the Model Train scene, or other tabletop wargames.'
+            text: 'For all intents an purposes, terrain could be printed out on paper, but thats not very evocative, is it? Terrain can be bought, or you can make your own woods, hills, rivers and buildings to be used in your games. There are loads of resources online, and also books on the subject. Much knowledge can be transferred from the Model Train scene, or other tabletop wargames. '
       -
         type: heading
         attrs:
@@ -465,5 +457,5 @@ modules:
             image:
               - etc24_venue_4-16-9.jpg
 updated_by: 9da3c936-f032-4fc4-95ba-d7d71ca81a34
-updated_at: 1741043756
+updated_at: 1741108626
 ---
