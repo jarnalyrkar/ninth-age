@@ -17,5 +17,6 @@
         "build": "vite build"
     },
     "author": "",
-    "license": "ISC"
+    "license": "ISC",
+    "type": "module"
 }
