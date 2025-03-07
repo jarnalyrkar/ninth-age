@@ -113,7 +113,7 @@ return [
 
     'binary' => env('STATAMIC_GIT_BINARY', 'git'),
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Commands
     |--------------------------------------------------------------------------
@@ -124,10 +124,10 @@ return [
     |
     */
 
-    'commands' => [
-        'git add {{ paths }}',
-        'git -c "user.name={{ name }}" -c "user.email={{ email }}" commit -m "{{ message }}"',
-    ],
+  'commands' => [
+    '{{ git }} add {{ paths }}',
+    '{{ git }} -c "user.name={{ name }}" -c "user.email={{ email }}" commit -m "{{ message }} [BOT]"',
+  ],
 
     /*
     |--------------------------------------------------------------------------
