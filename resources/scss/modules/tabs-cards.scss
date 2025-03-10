@@ -29,9 +29,9 @@
     }
   }
   &__nav-list {
-    @include list-reset;
     display: flex;
     justify-content: space-between;
+    @include list-reset;
     @media(min-width: $large) {
       padding-bottom: 4rem;
     }

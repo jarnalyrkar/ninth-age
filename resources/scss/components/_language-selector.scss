@@ -35,12 +35,12 @@
   &__dropdown-container {
     pointer-events: all;
     max-height: 0;
-    @include list-reset;
     transform: translateX(25%);
     position: absolute;
     bottom: 100%;
     transition: max-height 300ms;
     overflow: hidden;
+    @include list-reset;
     &--open {
       max-height: 14.5rem;
     }

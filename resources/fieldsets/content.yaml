@@ -68,3 +68,15 @@ fields:
                     type: textarea
                     display: Caption
                     localizable: false
+            video:
+              display: Video
+              instructions: 'YouTube Embed'
+              fields:
+                -
+                  handle: video_url
+                  field:
+                    type: video
+                    display: 'Video URL'
+                    localizable: false
+                    validate:
+                      - required

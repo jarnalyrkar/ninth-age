@@ -3,7 +3,7 @@ id: home
 blueprint: pages
 title: Home
 updated_by: 9da3c936-f032-4fc4-95ba-d7d71ca81a34
-updated_at: 1741212908
+updated_at: 1741635883
 modules:
   -
     id: m0bgapwc
@@ -15,6 +15,9 @@ modules:
     archive_label: 'Deep Dive the Archive'
     archive_link: 'https://community.the-ninth-age.com/news/'
     subheading: 'A fantasy wargame by the community'
+    layout: centered
+    background_video: ninth-age-hero.mp4
+    scroll_to_id: tabs_cards_m0bhvzb1
   -
     id: m0bhvzb1
     heading: 'How we play'

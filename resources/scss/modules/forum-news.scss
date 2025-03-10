@@ -8,16 +8,18 @@
     padding-block: calc(var(--module-spacing) / 2);
     width: min(100%, var(--container));
     margin-inline: auto;
+    @media(max-width: $small) {
+      padding-inline: var(--gap);
+    }
   }
   &__header {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     padding-bottom: 1rem;
     @media(max-width: $large) {
       flex-wrap: wrap;
       row-gap: 1rem;
-      padding-inline: 1rem;
     }
     @media(min-width: $large) {
       padding-bottom: 2rem;

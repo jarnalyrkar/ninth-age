@@ -4,6 +4,159 @@ blueprint: page
 title: 'Getting Started'
 modules:
   -
+    id: m822xybk
+    content:
+      -
+        type: heading
+        attrs:
+          level: 1
+        content:
+          -
+            type: text
+            text: 'Getting started'
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'The fantasy genre has never enjoyed such general popularity as it does today. If you are into any fantasy media, you may well be an aspiring commander of The Ninth Age.'
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'The Ninth Age are played with a selection of 16 official armies represented by 28mm tall models on a tabletop with terrain that impacts gameplay. '
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Battles are fought by rolling dice to determine successes or fails, from archers shooting their bows, to dragons shooting fire or knights charging with lances.'
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'The Ninth Age: Fantasy Battles is for many more than just the ruleset but also a hobby which includes learning to paint miniatures, creating terrain pieces, and maybe even 3D-printing.'
+    type: content
+    enabled: true
+  -
+    id: m81bb7t0
+    flip_layout: false
+    image: wdt-barbarian-horde.jpg
+    content:
+      -
+        type: heading
+        attrs:
+          level: 2
+        content:
+          -
+            type: text
+            text: 'Collecting an army'
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'We do not sell or produce miniatures, so you get to pick and choose miniatures from whichever manufacturer you like the most! You could even 3D-print your own army, or use Lego or paper proxies. Using third-party services, you can also play the game online.'
+      -
+        type: set
+        attrs:
+          id: m81besz3
+          values:
+            type: button
+            label: 'Collecting for your army'
+            link: '#'
+    type: half_image_half_text
+    enabled: true
+  -
+    id: m81ei4gm
+    flip_layout: true
+    image: 2024-08-27_20-42.jpeg
+    content:
+      -
+        type: heading
+        attrs:
+          level: 2
+        content:
+          -
+            type: text
+            text: 'Assembly and paint'
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: "While you can buy a fully painted army from a number of talented individuals or buy a full army used, building and painting an army yourself is one of the most rewarding parts of the hobby. Whether you're crafting a regular human soldier, a towering daemon, or a colossal mechanical construct, your skills will grow with practice as you bring your miniatures to life."
+      -
+        type: set
+        attrs:
+          id: m81besz3
+          values:
+            type: button
+            label: 'Assembly and paint'
+            link: '#'
+    type: half_image_half_text
+    enabled: true
+  -
+    id: m81ejlj3
+    flip_layout: false
+    image: minis-tabletop.jpg
+    content:
+      -
+        type: heading
+        attrs:
+          level: 2
+        content:
+          -
+            type: text
+            text: 'Playing the game'
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Learn to play using our free rulebooks, or use video resources made by the community. Many people love to play games against friends, family, and other members of the Ninth Age community.'
+      -
+        type: set
+        attrs:
+          id: m81besz3
+          values:
+            type: button
+            label: 'Learning the Game'
+            link: '#'
+    type: half_image_half_text
+    enabled: true
+  -
+    id: m81ekmj2
+    flip_layout: true
+    image: etc24_venue_4-16-9.jpg
+    content:
+      -
+        type: heading
+        attrs:
+          level: 2
+        content:
+          -
+            type: text
+            text: 'The competitive scene'
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'If you like competing in tournaments, there are several competitions each year.'
+      -
+        type: set
+        attrs:
+          id: m81besz3
+          values:
+            type: button
+            label: 'Tournament play'
+            link: '#'
+    type: half_image_half_text
+    enabled: true
+  -
     id: m0fs7l6l
     type: content
     enabled: true
@@ -457,5 +610,5 @@ modules:
             image:
               - etc24_venue_4-16-9.jpg
 updated_by: 9da3c936-f032-4fc4-95ba-d7d71ca81a34
-updated_at: 1741108626
+updated_at: 1741551832
 ---

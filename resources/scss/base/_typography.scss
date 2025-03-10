@@ -1,17 +1,15 @@
 @use '../base/breakpoints' as *;
 
 html {
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.2;
   color: var(--color-text);
 }
 
-p {
-  font-family: "Tahoma", sans-serif;
-}
-
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
-  font-family: "Times New Roman", serif;
-  font-weight: 700;
+  font-family: "Alegreya", serif;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--color-accent);
 }

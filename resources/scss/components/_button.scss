@@ -3,17 +3,16 @@
 .button {
   text-decoration: none;
   border-radius: 10rem;
-  padding: .75em .5em;
+  padding: .75em;
   background-color: var(--color-secondary);
   color: var(--color-main);
   transition: background-color 300ms;
   display: inline-block;
   font-size: var(--fs-base);
-  @media(min-width: $large) {
-    font-size: var(--fs-sm);
-  }
+  font-weight: 700;
+  text-align: center;
+  text-wrap: balance;
   @media(min-width: $xxlarge) {
-    font-size: var(--fs-base);
     padding: .75em 1em;
   }
   @media(hover:hover) {

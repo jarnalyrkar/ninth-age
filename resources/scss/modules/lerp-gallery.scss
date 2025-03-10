@@ -24,24 +24,30 @@
     margin-inline: auto;
   }
   &__image-container {
-    height: 100vh;
     display: grid;
     justify-content: start;
+    aspect-ratio: 1;
+    @media(min-width: $large) {
+      height: 100vh;
+      aspect-ratio: unset;
+
+    }
     &:nth-child(even) {
       justify-content: end;
     }
   }
   &__image {
-    width: 80%;
     height: 80%;
     margin-inline: auto;
-    border-radius: 2rem;
     vertical-align: middle;
     object-fit: cover;
     transform: scale(1.2);
     transition: transform 0.5s ease-out;
     aspect-ratio: 1;
+    border-radius: .5rem;
     @media(min-width: $large) {
+      border-radius: 2rem;
+      width: 80%;
       aspect-ratio: 16/9;
     }
   }

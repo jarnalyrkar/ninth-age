@@ -1,4 +1,4 @@
-<section class="half-image-half-text{{ !flip_layout ? '' : ' half-image-half-text--flipped' }}">
+<section class="half-image-half-text{{ !flip_layout ? '' : ' half-image-half-text--flipped' }}" id="{{ type }}_{{ id }}">
   <div class="half-image-half-text__inner">
     <div class="half-image-half-text__image-container">
       <img class="half-image-half-text__image" src="{{ glide:image width="856" height="481" fit="crop_focal" format="webp" }}" alt="{{ alt }}">
@@ -7,9 +7,11 @@
       <div class="half-image-half-text__content">
         {{ content }}
           {{ if type == 'text' }}
-            {{ text }}
+              <div class="bard">
+                {{ text }}
+              </div>
           {{ else }}
-          HELLO
+            {{ partial src="modules/partials/{type}" }}
           {{ /if }}
         {{ /content }}
       </div>

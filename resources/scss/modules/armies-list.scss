@@ -1,5 +1,6 @@
 @use '../base' as *;
 
+
 .armies-list {
   background-color: var(--color-accent-700);
   @media(min-width: $large) {
@@ -50,6 +51,7 @@
   &__heading {
     font-size: var(--fs-xl);
     text-wrap: balance;
+    color: var(--color-text);
     @media(min-width: $large) {
       grid-column: 2;
       font-size: var(--fs-xxl);

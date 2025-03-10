@@ -14,15 +14,19 @@
       background-color: var(--color-main-light-200);
     }
   }
+  &__header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   &__heading {
-    font-weight: 400;
     text-transform: unset;
     font-size: 1.25rem;
     margin-bottom: .5rem;
     text-wrap: balance;
   }
   &__date {
-    font-weight: 400;
     font-size: .825rem;
     color: rgba(255,255,255,.5);
     padding-bottom: .25rem;

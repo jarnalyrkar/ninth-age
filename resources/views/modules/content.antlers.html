@@ -1,9 +1,11 @@
-<section class="content">
+<section class="content" id="{{ type }}_{{ id }}">
   <div class="content__outer">
     <div class="content__inner">
       {{ content }}
         {{ if type == 'text' }}
-          {{ text }}
+          <div class="bard">
+            {{ text }}
+          </div>
         {{ else }}
           {{ partial src="modules/partials/content-{type}" }}
         {{ /if }}

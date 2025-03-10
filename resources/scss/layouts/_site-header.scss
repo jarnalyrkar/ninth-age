@@ -7,10 +7,14 @@
   position: relative;
   z-index: 10;
   &__inner {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     @include container;
+    @media(min-width: $large) {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+    }
   }
   &__logo {
     width: 8.5rem;

@@ -1,5 +1,7 @@
-<section class="hero">
-  <div class="hero__image-container" style="background-image: url({{ background_image }});"></div>
+<section class="hero" id="{{ type }}_{{ id }}">
+  <div class="hero__image-container" style="background-image: url({{ background_image }});">
+    <video class="hero__video" src="{{ background_video }}" autoplay playsinline muted loop></video>
+  </div>
   <div class="hero__container">
     <div class="hero__inner">
       <header class="hero__header">
@@ -8,6 +10,9 @@
           <p class="hero__description">{{ subheading }}</p>
         </div>
       </header>
+      {{ if scroll_to_id }}
+        <a href="#{{ scroll_to_id }}" class="hero__down-arrow">&darr;</a>
+      {{ /if }}
     </div>
   </div>
 </section>

@@ -1,0 +1,39 @@
+title: 'Layered Graphics'
+fields:
+  -
+    handle: layered_graphics
+    field:
+      min_files: 2
+      mode: grid
+      container: assets
+      type: assets
+      display: 'Layered Graphics'
+      localizable: false
+  -
+    handle: captions
+    field:
+      type: replicator
+      display: Captions
+      localizable: false
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: symbol
+                  field:
+                    max_files: 1
+                    min_files: 1
+                    container: assets
+                    type: assets
+                    display: Symbol
+                    localizable: false
+                -
+                  handle: content
+                  field:
+                    type: textarea
+                    display: Content
+                    localizable: false

@@ -11,8 +11,16 @@
     display: grid;
     gap: 1rem;
     align-items: center;
+    @media(max-width: $small) {
+      padding-inline: var(--gap);
+    }
     @media(min-width: $xlarge) {
       grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+  }
+  &__content {
+    & .button {
+      margin-top: 2rem;
     }
   }
   &__image {
@@ -26,16 +34,22 @@
     }
   }
   &__image-container {
-    grid-column: 1 / 6;
+    @media(min-width: $large) {
+      grid-column: 1 / 6;
+    }
   }
   &--flipped {
     & .half-image-half-text__image-container {
-      grid-column: 7 / -1;
-      grid-row: 1;
+      @media(min-width: $large) {
+        grid-column: 7 / -1;
+        grid-row: 1;
+      }
     }
     & .half-image-half-text__content-container {
-      grid-column: 1 / 6;
-      grid-row: 1;
+      @media(min-width: $large) {
+        grid-column: 1 / 6;
+        grid-row: 1;
+      }
     }
   }
 }

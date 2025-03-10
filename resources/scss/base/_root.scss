@@ -40,13 +40,13 @@
 
   --gap: 1rem;
 
-  --fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
-  --fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
-  --fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
-  --fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
-  --fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
-  --fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
-  --fs-xxxl: clamp(3.05rem, 3.54vi + 2.17rem, 5rem);
+  --fs-sm: clamp(0.7rem, 0.14vi + 0.66rem, 0.8rem);
+  --fs-base: clamp(0.9rem, 0.28vi + 0.81rem, 1.05rem);
+  --fs-md: clamp(1.1rem, 0.5vi + 0.95rem, 1.4rem);
+  --fs-lg: clamp(1.35rem, 0.85vi + 1.15rem, 1.85rem);
+  --fs-xl: clamp(1.7rem, 1.3vi + 1.35rem, 2.45rem);
+  --fs-xxl: clamp(2.1rem, 2vi + 1.65rem, 3.25rem);
+  --fs-xxxl: clamp(2.6rem, 3vi + 1.9rem, 4.3rem);
   /* Module spacing */
 
   --container: 100%;

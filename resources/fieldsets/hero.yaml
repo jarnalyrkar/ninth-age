@@ -1,6 +1,47 @@
 title: Hero
 fields:
   -
+    handle: layout
+    field:
+      options:
+        -
+          key: centered
+          value: Centered
+        -
+          key: left
+          value: Left
+      type: select
+      display: Layout
+      localizable: false
+  -
+    handle: background_section
+    field:
+      type: section
+      display: Background
+      localizable: false
+  -
+    handle: background_image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Background Image'
+      localizable: false
+  -
+    handle: background_video
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'Background Video'
+      localizable: false
+  -
+    handle: content_section
+    field:
+      type: section
+      display: Content
+      localizable: false
+  -
     handle: heading
     field:
       type: text
@@ -13,10 +54,20 @@ fields:
       display: Subheading
       localizable: false
   -
-    handle: background_image
+    handle: body
     field:
-      max_files: 1
-      container: assets
-      type: assets
-      display: 'Background image'
+      buttons:
+        - bold
+        - italic
+        - removeformat
+        - anchor
+      remove_empty_nodes: false
+      type: bard
+      display: Body
+      localizable: false
+  -
+    handle: scroll_to_id
+    field:
+      type: text
+      display: 'Scroll To ID'
       localizable: false

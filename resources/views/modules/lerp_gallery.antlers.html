@@ -1,4 +1,4 @@
-<section class="lerp-gallery">
+<section class="lerp-gallery" id="{{ type }}_{{ id }}">
   <div class="lerp-gallery__inner">
     <div class="lerp-gallery__images">
       {{ images }}
@@ -16,7 +16,7 @@
     }
 
     let smoothScrollY = window.scrollY;
-    const lerpFactor = 0.08; // Lower = smoother
+    const lerpFactor = 0.1; // Lower = smoother
 
     const wrappers = document.querySelectorAll('.lerp-gallery__image-container');
 
