@@ -31,8 +31,14 @@
     justify-items: center;
     gap: .25rem;
     grid-template-columns: repeat(8, minmax(0, 1fr));
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: var(--color-accent-700);
+    padding-block: .5rem;
     @media(min-width: $large) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
+      top: unset;
       left: 0;
       position: absolute;
     }
