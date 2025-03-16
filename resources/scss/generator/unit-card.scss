@@ -339,4 +339,7 @@
   .unit-card:has(.unit-card__include-option:not(:checked)) {
     display: none;
   }
+  .unit-card:nth-child(even) {
+    page-break-after: always;
+  }
 }

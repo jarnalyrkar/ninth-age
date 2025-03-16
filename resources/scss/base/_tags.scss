@@ -40,11 +40,6 @@ a {
     margin-block: .5rem;
   }
 
-  br {
-    display: block;
-    margin-top: 1rem;
-  }
-
   u {
     text-decoration: underline;
   }
@@ -59,5 +54,18 @@ a {
 
   p + p {
     margin-top: 1rem;
+  }
+
+  table {
+    margin-block: 1rem;
+    font-size: 1rem;
+    & th, td {
+      border: 1px solid var(--color-main-light-600);
+      padding: .25rem;
+    }
+    & th {
+      text-align: unset;
+      background-color: var(--color-main-light-100);
+    }
   }
 }
