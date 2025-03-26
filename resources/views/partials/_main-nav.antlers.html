@@ -1,0 +1,30 @@
+<nav class="main-nav">
+  <div class="main-nav__outer">
+    <div class="main-nav__inner">
+      <nav class="main-nav__nav">
+        <ul class="main-nav__list">
+          {{ nav:main_navigation }}
+            <li class="main-nav__item">
+              {{ if url }}
+                <a class="main-nav__link" href="{{ url }}">
+                  {{ title }}
+                </a>
+              {{ elseif children }}
+                <button class="main-nav__button">{{ title }}</button>
+                <ul class="main-nav__sublist">
+                  {{ children }}
+                    <li class="main-nav__item">
+                      {{ if url }}
+                        <a class="main-nav__link" href="{{ url }}">{{ title }}</a>
+                      {{ /if }}
+                    </li>
+                  {{ /children }}
+                </ul>
+              {{ /if }}
+            </li>
+          {{ /nav:main_navigation }}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</nav>

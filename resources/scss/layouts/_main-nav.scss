@@ -1,6 +1,6 @@
 @use '../base' as *;
 
-.site-navigation {
+.main-nav {
   position:relative;
   &--open .site-navigation__outer {
     transform: translateY(0);

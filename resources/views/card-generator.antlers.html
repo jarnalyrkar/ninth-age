@@ -11,7 +11,7 @@
 
 <body>
   {{ partial:header }}
-  {{ partial:navigation }}
+  {{ partial:main-nav }}
   <main class="card-generator">
   <div class="generator-settings">
     <div class="generator-settings__inner">
@@ -72,6 +72,12 @@
               Toggle transparency
             </label>
           </div>
+          <div class="generator-settings__row">
+            <label class="global-toggle">
+              <p class="generator-settings__heading">Toggle exclusion of all cards</p>
+              <input id="global-include-option" type="checkbox">
+            </label>
+          </div>
         </div>
       </div>
     </div>
@@ -86,11 +92,13 @@
         </div>
       </div>
       <div id="army-list" class="army-list"></div>
+      <div class="print-list"></div>
     </main>
 
     <template id="unit-card">
       {{ partial:generator/card-unit }}
     </template>
+
 
   {{ partial:footer }}
 </body>

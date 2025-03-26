@@ -20,6 +20,7 @@ export function cardGenerator() {
   mixBlendListener()
   globalImagePosListener()
   globalTransparencyListener()
+  globalToggleListener()
   // Option overrides per card
   cardOptionListeners()
 }
@@ -124,6 +125,7 @@ function setupSubversionListener() {
       hideLoader()
       styleSettings.classList.remove('generator-settings__styles--hidden')
       outputUnits(units)
+      regeneratePrintList()
     }
   });
 }
@@ -240,7 +242,46 @@ function cardOptionListeners() {
         card.style.backgroundBlendMode = "unset"
       }
     }
+
+    if (ev.target.classList.contains('unit-card__include-option')) {
+      const parent = card.closest('.unit-card')
+      if (ev.target.checked) {
+        parent.classList.add('unit-card--visible')
+      } else {
+        parent.classList.remove('unit-card--visible')
+      }
+      regeneratePrintList()
+    }
   })
+}
+
+function globalToggleListener() {
+  let checkbox = document.querySelector('#global-include-option')
+  checkbox.addEventListener('change', () => {
+    const cards = document.querySelectorAll('.unit-card')
+    if (checkbox.checked) {
+      cards.forEach(card => {
+        card.classList.remove('unit-card--visible')
+        const option = card.querySelector('.unit-card__include-option')
+        option.checked = false
+      })
+    } else {
+      cards.forEach(card => {
+        card.classList.add('unit-card--visible')
+        const option = card.querySelector('.unit-card__include-option')
+        option.checked = true
+      })
+    }
+    regeneratePrintList()
+  })
+}
+
+function regeneratePrintList() {
+  const list = document.querySelector('.print-list')
+  list.innerHTML = ""
+  const visibleCards = document.querySelectorAll('.unit-card--visible')
+  const clones = [...visibleCards].map(card => card.cloneNode(true)); // Clone each card
+  list.append(...clones); // Append all clones at once
 }
 
 function startLoader() {

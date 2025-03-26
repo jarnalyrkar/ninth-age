@@ -1,1 +1,66 @@
-{  }
+tree:
+  -
+    id: 34e32da7-8875-4d57-be05-26dba5726caa
+    title: Armies
+    children:
+      -
+        id: 96b83b86-181d-4b2e-9115-5ad9f5fc18b0
+        entry: acc936df-8742-4685-a5ba-a557abbfe9e6
+      -
+        id: 58fc12ea-2c65-44e1-a387-e6cbb9a5d6dd
+        entry: 6ef541ff-f66f-4ae7-afb6-7eadc1f98026
+      -
+        id: a2072a7c-54a3-46dd-8789-b5e1374ec181
+        entry: c399a5d9-35ec-4db2-9014-09550c259a71
+      -
+        id: 720e975a-1441-419f-a54c-7887a34518af
+        entry: 64cb64a1-ce2a-4654-ab0d-6af7a24fe68c
+      -
+        id: 44da57d7-ac52-4205-b08b-69b8157ba516
+        entry: 5b5da257-fb60-4f16-99d9-3ed85f552ecf
+      -
+        id: f6e678de-2731-4fa3-9ca6-77c8c17c92c3
+        entry: 06e689d8-1305-4aa1-a97f-3c8328efae58
+      -
+        id: 76d9ff90-0e58-48a4-9805-4c1e0e239908
+        entry: 51f35e0e-a4f0-42f8-bc3b-4be22c309a97
+      -
+        id: 40e5757b-d11b-492d-a061-f7364dd153af
+        entry: 1d98f126-3c6e-4229-baf5-e9272c0c9ca7
+      -
+        id: 78e978ab-20e0-4c25-af81-835c4ec368db
+        entry: 3ee9dcb5-1556-40fe-ac3d-1d936b29d27b
+      -
+        id: 771a5feb-519f-4854-b208-fa2cdea733d8
+        entry: ce91d157-3c18-4f45-9d5b-a677ba81999e
+      -
+        id: ee02cf69-4e1e-48b3-8e0a-078c7f50edf5
+        entry: 85a4c43c-9e24-42df-a281-da55bfda5fff
+      -
+        id: 67f22fee-1272-4431-bce3-1dad562ed435
+        entry: 77daa46d-0e5b-431c-bf1e-73eb5454eb41
+      -
+        id: 83328bcf-fe95-4ba2-b295-e4fe5c4e2e72
+        entry: cdab4d80-59d8-436e-b497-4f9f4712a026
+      -
+        id: 7f16cf93-8759-48ac-b1fc-c8b332ef12ce
+        entry: 589bc6b0-c899-4d6a-b005-90bcbacd26cf
+      -
+        id: d620fd86-43c9-4622-ae19-628521f7f638
+        entry: a3a8f333-4ac4-4857-b87e-90ee293f2bb4
+      -
+        id: 257aecbd-a291-4152-9520-7954f1603aa4
+        entry: 9e8f9d7d-6d03-4fda-9de1-f923dc9be64c
+  -
+    id: c6a72f6d-aad8-4ced-9ad9-80e81f753607
+    title: 'For Beginners'
+    children:
+      -
+        id: 4c126717-5b70-4d1c-b62f-6c7bb9146f28
+        entry: b139f9be-a614-4407-840a-76c31fd6d2e8
+      -
+        id: fcfa8840-6163-417c-a3a7-76c8bb612bc8
+        entry: 62b1d9a5-3508-4154-9153-27cff6c035b3
+      -
+        id: 2c19dab1-fa1b-4b5b-a7cc-83b0198c7c42
+        entry: 5b1fd016-4df3-4bf3-87b5-252a9667b696
