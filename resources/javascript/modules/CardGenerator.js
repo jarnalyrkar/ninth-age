@@ -224,6 +224,7 @@ function cardOptionListeners() {
     if (ev.target.classList.contains('remove-image-button')) {
       ev.target.closest('.unit-card').querySelector('.unit-card__inner').removeAttribute('style')
       ev.target.previousElementSibling.value = null
+      regeneratePrintList()
     }
   })
   list.addEventListener('change', (ev) => {
@@ -250,8 +251,8 @@ function cardOptionListeners() {
       } else {
         parent.classList.remove('unit-card--visible')
       }
-      regeneratePrintList()
     }
+    regeneratePrintList()
   })
 }
 
