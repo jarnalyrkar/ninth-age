@@ -331,7 +331,7 @@ function outputUnits(units) {
 
         if (index === 0) {
           // First troop: Populate the existing elements
-          container.querySelector('.unit-card__troop').setAttribute('data-troop-id', troop.id)
+          container.querySelector('.unit-card__troop').setAttribute('data-unit-id', troop.unit_id)
           container.querySelector('.unit-card__troop-name').innerHTML = troop.name ?? '/';
           container.querySelector('.unit-card__troop-attacks').innerHTML = replaceAsCharacter(troop.carac.att) ?? '/';
           container.querySelector('.unit-card__troop-offensive-skill').innerHTML = replaceAsCharacter(troop.carac.of) ?? '/';
@@ -342,7 +342,7 @@ function outputUnits(units) {
           const newRow = container.querySelector('.unit-card__troop').cloneNode(true)
 
           // Update the content for each cloned stat block
-          newRow.setAttribute('data-troop-id', troop.id)
+          newRow.setAttribute('data-unit-id', troop.unit_id)
           newRow.querySelector('.unit-card__troop-name').innerHTML = troop.name ?? '/';
           newRow.querySelector('.unit-card__troop-attacks').innerHTML = replaceAsCharacter(troop.carac.att) ?? '/';
           newRow.querySelector('.unit-card__troop-offensive-skill').innerHTML = replaceAsCharacter(troop.carac.of) ?? '/';
@@ -359,18 +359,15 @@ function outputUnits(units) {
     if (army_icon) {
       clone.querySelector('.unit-card__icon img').src = base_url + army_icon
     }
-
     unit.model_rule_unit_troops.forEach(rule => {
       if (rule.type_lvl === 'Global') {
         const globalRulesElement = clone.querySelector('.unit-card__global-rules')
         globalRulesElement.insertAdjacentHTML('beforeend', "<span>" + rule.name + "</span>")
-      }
-      if (rule.type_lvl === 'Defensive') {
+      } else if (rule.type_lvl === 'Defensive') {
         const defensiveRulesElement = clone.querySelector('.unit-card__defensive-rules')
         defensiveRulesElement.insertAdjacentHTML('beforeend', "<span>" + rule.name + "</span>")
-      }
-      if (rule.type_lvl === 'Offensive') {
-        const offensiveRulesElement = clone.querySelector(`.unit-card__troop[data-troop-id="${rule.troop_id}"] .unit-card__troop-offensive-rules`)
+      } else if (rule.type_lvl === 'Offensive') {
+        const offensiveRulesElement = clone.querySelector(`.unit-card__troop[data-unit-id="${rule.unit_id}"] .unit-card__troop-offensive-rules`)
         if (offensiveRulesElement) {
           offensiveRulesElement.insertAdjacentHTML('beforeend', "<span>" + rule.name + "</span>")
         }
