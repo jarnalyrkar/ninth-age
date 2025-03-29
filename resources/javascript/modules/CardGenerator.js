@@ -303,6 +303,8 @@ function outputUnits(units) {
   const template = document.querySelector('#unit-card')
   let first = true
   units.forEach(unit => {
+    // if (unit.id != 15838) return
+    // console.log(unit)
     let clone = template.content.cloneNode(true)
     const category = army_organization.find(item => item.id === unit.principal_organisation_id)
     if (category) {
@@ -325,13 +327,14 @@ function outputUnits(units) {
     clone.querySelector('.unit-card__resilience').innerHTML = replaceAsCharacter(unit.carac.res);
     clone.querySelector('.unit-card__armour').innerHTML = replaceAsCharacter(unit.carac.arm);
     // clone.querySelector('.unit-card__aegis').innerHTML = replaceAsCharacter(unit.carac.aeg);
+
     if (unit.troops) {
       unit.troops.forEach((troop, index) => {
         let container = clone.querySelector('.unit-card__troop-container'); // Find the container
-
         if (index === 0) {
           // First troop: Populate the existing elements
           container.querySelector('.unit-card__troop').setAttribute('data-unit-id', troop.unit_id)
+          container.querySelector('.unit-card__troop').setAttribute('data-troop-id', troop.id)
           container.querySelector('.unit-card__troop-name').innerHTML = troop.name ?? '/';
           container.querySelector('.unit-card__troop-attacks').innerHTML = replaceAsCharacter(troop.carac.att) ?? '/';
           container.querySelector('.unit-card__troop-offensive-skill').innerHTML = replaceAsCharacter(troop.carac.of) ?? '/';
@@ -342,7 +345,10 @@ function outputUnits(units) {
           const newRow = container.querySelector('.unit-card__troop').cloneNode(true)
 
           // Update the content for each cloned stat block
-          newRow.setAttribute('data-unit-id', troop.unit_id)
+          newRow.setAttribute('data-troop-id', troop.id)
+          if (troop.unit_id) {
+            newRow.setAttribute('data-unit-id', troop.unit_id)
+          }
           newRow.querySelector('.unit-card__troop-name').innerHTML = troop.name ?? '/';
           newRow.querySelector('.unit-card__troop-attacks').innerHTML = replaceAsCharacter(troop.carac.att) ?? '/';
           newRow.querySelector('.unit-card__troop-offensive-skill').innerHTML = replaceAsCharacter(troop.carac.of) ?? '/';
@@ -359,16 +365,28 @@ function outputUnits(units) {
     if (army_icon) {
       clone.querySelector('.unit-card__icon img').src = base_url + army_icon
     }
+
     unit.model_rule_unit_troops.forEach(rule => {
       if (rule.type_lvl === 'Global') {
         const globalRulesElement = clone.querySelector('.unit-card__global-rules')
         globalRulesElement.insertAdjacentHTML('beforeend', "<span>" + rule.name + "</span>")
-      } else if (rule.type_lvl === 'Defensive') {
+      }
+      if (rule.type_lvl === 'Defensive') {
         const defensiveRulesElement = clone.querySelector('.unit-card__defensive-rules')
         defensiveRulesElement.insertAdjacentHTML('beforeend', "<span>" + rule.name + "</span>")
-      } else if (rule.type_lvl === 'Offensive') {
-        const offensiveRulesElement = clone.querySelector(`.unit-card__troop[data-unit-id="${rule.unit_id}"] .unit-card__troop-offensive-rules`)
-        if (offensiveRulesElement) {
+      }
+      if (rule.type_lvl === 'Offensive') {
+        let offensiveRulesElement = clone.querySelector(`.unit-card__troop[data-troop-id="${rule.troop_id}"] .unit-card__troop-offensive-rules`)
+        if (!offensiveRulesElement) {
+          offensiveRulesElement = clone.querySelector(`.unit-card__troop[data-unit-id="${rule.unit_id}"] .unit-card__troop-offensive-rules`)
+          if (!offensiveRulesElement) {
+            console.log("Not able to find correct element for this rule", rule)
+          } else {
+            // console.log("Adding rule using troop id", rule.name)
+            offensiveRulesElement.insertAdjacentHTML('beforeend', "<span>" + rule.name + "</span>")
+          }
+        } else {
+          // console.log("Adding rule using unit_id", rule.name)
           offensiveRulesElement.insertAdjacentHTML('beforeend', "<span>" + rule.name + "</span>")
         }
       }
